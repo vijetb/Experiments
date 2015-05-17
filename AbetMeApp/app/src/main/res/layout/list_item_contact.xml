@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:layout_margin="@dimen/margin_layout"
+    android:padding="@dimen/padding_layout"
+    >
+
+
+    <ImageView
+        android:id="@+id/contactPicture"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:cropToPadding="true"
+        />
+
+    <CheckedTextView
+        android:id="@+id/contactName"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/contactPicture"
+        android:gravity="center_vertical"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:layout_marginLeft="@dimen/margin_layout"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Vijet"
+        android:layout_margin="@dimen/margin_layout"
+        android:textColor="@color/orange"
+        android:checked="false"/>
+
+
+
+</RelativeLayout>

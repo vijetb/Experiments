@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vijet.abetme.fragmentservice.ContactsFragment"
+    android:background="@color/bg">
+
+    <ListView
+        android:id="@+id/contactsList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/margin_layout"
+        android:scrollbarStyle="outsideInset"
+        android:fastScrollEnabled="true"
+        android:dividerHeight="0.2dp"
+        android:divider="@color/silver">
+        </ListView>
+
+
+</RelativeLayout>

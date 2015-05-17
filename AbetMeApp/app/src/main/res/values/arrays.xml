@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="phone_modes">
+        <item>DEFAULT</item>
+        <item>SILENT</item>
+        <item>VIBRATE</item>
+    </string-array>
+
+    <string-array name="help_description_parent">
+        <item>Service Tab</item>
+        <item>Service</item>
+        <item>Phone Mode</item>
+        <item>SMS</item>
+        <item>WhatsApp</item>
+    </string-array>
+
+    <string-array name="help_description_child">
+        <item>Service Tab contains all the preferences that the user can configure. These preferences will be saved.</item>
+        <item>Turn on this button to start the Abet me services. All your preferences will be activated only after you
+        activate this service</item>
+        <item>Adds the Phone Mode to your preference. DEFAULT - current Mode, SILENT - Phone Mode will be in Silent mode, Vibrate - Phone will be in VIBRATE mode</item>
+        <item>Enable this service to send the sms to the contact in the Active Contacts list if the user calls when you have activated the Service. Define the Text Message that you want to send in the Message. </item>
+        <item>Enable this service to send the WhatsApp message to the contact in the Active Contacts list if the user calls when you have activated the Service. Define the Text Message that you want to send in the Message. </item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AbetMeApp</string>
+
+    <!-- MENU TAB -->
+    <string name="action_help">Help</string>
+    <string name="action_aboutus">About Us</string>
+    <!-- TAB NAMES -->
+    <string name="tab_1">SERVICES</string>
+    <string name="tab_2">ACTIVE</string>
+    <string name="tab_3">CONTACTS</string>
+    <!-- NOTIFICATION  -->
+    <string name="notification_big_text">AbetMe is Active</string>
+    <string name="notification_small_text">Touch to change the settings!</string>
+    <!-- ACTIVATE SERVICE SECTION -->
+    <string name="tv_activate_service">SERVICE</string>
+    <string name="tv_activated">Activated</string>
+    <string name="tv_deactivated">De-activated</string>
+
+    <!-- PHONE MODE SECTION -->
+    <string name="tv_phone_mode">PHONE-MODE</string>
+
+    <!-- SMS MODE SECTION -->
+    <string name="tv_sms_service">SMS</string>
+    <string name="tv_sms_hint">Enter the text that you want to send to the active recipients!</string>
+    <string name="tv_sms_text_count_default">160/ 2</string>
+
+
+    <!-- WA MODE SECTION -->
+    <string name="tv_wa_service">WHATSAPP</string>
+    <string name="tv_wa_hint">Enter the text that you want to send to the active recipients!</string>
+    <!-- UnKNOWN CONTACTS SERVICE SECTION -->
+    <string name="tv_unknown_contacts_service">UNKNOWN-CONTACTS</string>
+
+
+
+    <!-- CONTACTS SECTION -->
+    <string name="menu_add"><u>ADD</u></string>
+    <string name="menu_select_all"><u>SELECT ALL</u></string>
+    <string name="menu_clear"><u>CLEAR</u></string>
+
+    <!-- HELP SECTION -->
+    <string name="tv_help_header"><u>HELP</u></string>
+            <!-- HELP SECTION - TABS - DESCRIPTION-->
+    <string name="tv_help_tabs">\u25A0  Tabs (Service/ Active Contacts/ Contacts)</string>
+    <string name="tv_help_tabs_desc">Application is divided into three tabs \n1.Service Tab - This tab contains the user preferences\n2. Active Contacts Tab - This tab contains the list of active contacts on which the preferences set in the Service tab will be applied\nContacts tab - Contains list of contacts through which you can add the contacts into the active contacts</string>
+    <!-- HELP SECTION - Services - DESCRIPTION-->
+    <string name="tv_help_service">\u25A0  Service </string>
+    <string name="tv_help_service_desc">This option activates all the Services provided by the application.</string>
+    <!-- HELP SECTION - PHONE MODE - DESCRIPTION-->
+    <string name="tv_help_phone_mode">\u25A0  Phone - Mode </string>
+    <string name="tv_help_phone_mode_desc">Select this option to choose the phone mode after you activate the Service.</string>
+</resources>

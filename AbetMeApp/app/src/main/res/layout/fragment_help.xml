@@ -1,0 +1,300 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/helpLayout_parent"
+    android:background="@color/bg">
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/helpLayoutHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_layout"
+        >
+        <TextView
+            android:id="@+id/tv_activate_service"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/tv_help_header"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_marginLeft="@dimen/padding_layout"/>
+
+    </RelativeLayout>
+    <!-- TABS-->
+    <RelativeLayout
+        android:id="@+id/helpLayoutTab"
+        android:layout_below="@+id/helpLayoutHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_layout"
+        >
+        <TextView
+            android:id="@+id/tv_help_tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tv_help_tabs"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_marginLeft="@dimen/padding_layout"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/helpLayoutdescTab"
+        android:layout_below="@+id/helpLayoutTab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_extended_layout"
+        android:layout_marginRight="@dimen/margin_extended_layout"
+        android:layout_marginBottom="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/padding_extended_layout"
+        android:padding="@dimen/padding_layout"
+        android:background="@color/silver">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/tv_help_tabs_desc"
+            android:textColor="@color/bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_layout"/>
+
+    </RelativeLayout>
+
+    <!-- Service -->
+    <RelativeLayout
+        android:id="@+id/helpLayoutService"
+        android:layout_below="@+id/helpLayoutdescTab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_layout"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tv_help_service"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_marginLeft="@dimen/padding_layout"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/helpLayoutServicedescTab"
+        android:layout_below="@+id/helpLayoutService"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_extended_layout"
+        android:layout_marginRight="@dimen/margin_extended_layout"
+        android:layout_marginBottom="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/padding_extended_layout"
+        android:padding="@dimen/padding_layout"
+        android:background="@color/silver">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/tv_help_service_desc"
+            android:textColor="@color/bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_layout"/>
+
+    </RelativeLayout>
+
+    <!-- Phone mode -->
+    <RelativeLayout
+        android:id="@+id/helpLayoutPhoneMode"
+        android:layout_below="@+id/helpLayoutServicedescTab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_layout"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tv_help_phone_mode"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_marginLeft="@dimen/padding_layout"
+             />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/helpLayoutPhoneModedescTab"
+        android:layout_below="@+id/helpLayoutPhoneMode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_extended_layout"
+        android:layout_marginRight="@dimen/margin_extended_layout"
+        android:layout_marginBottom="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/padding_extended_layout"
+        android:padding="@dimen/padding_layout"
+        android:background="@color/silver">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/tv_help_phone_mode_desc"
+            android:textColor="@color/bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_layout"/>
+
+    </RelativeLayout>
+
+    <!-- SMS mode -->
+    <RelativeLayout
+        android:id="@+id/helpLayoutSMS"
+        android:layout_below="@+id/helpLayoutPhoneModedescTab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_layout"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="\u25A0 SMS"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_marginLeft="@dimen/padding_layout"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/helpLayoutSMSdescTab"
+        android:layout_below="@+id/helpLayoutSMS"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_extended_layout"
+        android:layout_marginRight="@dimen/margin_extended_layout"
+        android:layout_marginBottom="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/padding_extended_layout"
+        android:padding="@dimen/padding_layout"
+        android:background="@color/silver">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="SELECT THIS OPTION FOR SMS"
+            android:textColor="@color/bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_layout"/>
+
+    </RelativeLayout>
+
+    <!-- WHATSAPP mode -->
+    <RelativeLayout
+        android:id="@+id/helpLayoutWA"
+        android:layout_below="@+id/helpLayoutSMSdescTab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_layout"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="\u25A0 WhatsApp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_marginLeft="@dimen/padding_layout"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/helpLayoutWAdescTab"
+        android:layout_below="@+id/helpLayoutWA"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_extended_layout"
+        android:layout_marginRight="@dimen/margin_extended_layout"
+        android:layout_marginBottom="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/padding_extended_layout"
+        android:padding="@dimen/padding_layout"
+        android:background="@color/silver">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="SELECT THIS OPTION FOR WA"
+            android:textColor="@color/bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_layout"/>
+
+    </RelativeLayout>
+
+    <!-- Share With other cobtacts mode -->
+    <RelativeLayout
+        android:id="@+id/helpLayoutShareOthers"
+        android:layout_below="@+id/helpLayoutWAdescTab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_layout"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="\u25A0 Shrea with others"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_marginLeft="@dimen/padding_layout"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/helpLayoutShareOthersdescTab"
+        android:layout_below="@+id/helpLayoutShareOthers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_extended_layout"
+        android:layout_marginRight="@dimen/margin_extended_layout"
+        android:layout_marginBottom="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/padding_extended_layout"
+        android:padding="@dimen/padding_layout"
+        android:background="@color/silver">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="SHARE WITH OTHERS"
+            android:textColor="@color/bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_layout"/>
+
+    </RelativeLayout>
+</RelativeLayout>

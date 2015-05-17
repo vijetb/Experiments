@@ -1,0 +1,260 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vijet.abetme.fragmentservice.ServiceFragment"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:id="@+id/activateServiceLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rectangle"
+        android:layout_margin="@dimen/margin_layout"
+        android:padding="@dimen/padding_layout">
+
+        <TextView
+            android:id="@+id/tv_activate_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/secondaryLayout"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tv_activate_service"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_layout"/>
+
+        <RelativeLayout
+            android:id="@+id/secondaryLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            >
+
+            <Switch
+                android:id="@+id/switch_activate_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:splitTrack="true"/>
+
+
+            <TextView
+                android:id="@+id/tv_activate_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switch_activate_service"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/red"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- PHONE MODE LAYOUT-->
+    <RelativeLayout
+        android:id="@+id/phoneModeLayout"
+        android:layout_below="@+id/activateServiceLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rectangle"
+        android:layout_margin="@dimen/margin_layout"
+        android:padding="@dimen/padding_layout"
+        >
+
+        <TextView
+            android:id="@+id/tv_phone_mode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tv_phone_mode"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            />
+
+        <Spinner
+            android:id="@+id/phone_mode_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+    <!-- SMS LAYOUT-->
+    <RelativeLayout
+        android:id="@+id/smsLayout"
+        android:layout_below="@+id/phoneModeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rectangle"
+        android:layout_marginLeft="@dimen/margin_layout"
+        android:layout_marginRight="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/margin_layout"
+        android:padding="@dimen/padding_layout"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/tv_activate_sms_service"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tv_sms_service"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_centerVertical="true"
+            />
+
+        <Switch
+            android:id="@+id/switch_activate_sms_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:splitTrack="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <!-- SMS INFLATED LAYOUT-->
+    <RelativeLayout
+        android:id="@+id/smsExtendedLayout"
+        android:layout_below="@+id/smsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_extended_layout"
+        android:layout_marginRight="@dimen/margin_extended_layout"
+        android:layout_marginBottom="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/padding_extended_layout"
+        android:padding="@dimen/padding_layout"
+        android:background="@color/silver">
+
+
+        <TextView
+            android:id="@+id/smsLetterCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/tv_sms_text_count_default"
+            android:textColor="@color/orange"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_layout"/>
+
+        <EditText
+            android:id="@+id/smsSavedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/smsLetterCount"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="3"
+            android:gravity="top"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/tv_sms_hint"
+            android:padding="5dp"
+            android:textColor="@color/bg"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+    <!-- WA LAYOUT-->
+    <RelativeLayout
+        android:id="@+id/waLayout"
+        android:layout_below="@+id/smsExtendedLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rectangle"
+        android:layout_marginLeft="@dimen/margin_layout"
+        android:layout_marginRight="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/margin_layout"
+        android:padding="@dimen/padding_layout"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/tv_activate_wa_service"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tv_wa_service"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_centerVertical="true"
+            />
+
+        <Switch
+            android:id="@+id/switch_activate_wa_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:splitTrack="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <!-- WA INFLATED LAYOUT-->
+    <RelativeLayout
+        android:id="@+id/waExtendedLayout"
+        android:layout_below="@+id/waLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_extended_layout"
+        android:layout_marginRight="@dimen/margin_extended_layout"
+        android:layout_marginBottom="@dimen/margin_layout"
+        android:layout_marginTop="@dimen/padding_extended_layout"
+        android:padding="@dimen/padding_layout"
+        android:background="@color/silver">
+
+
+        <EditText
+            android:id="@+id/waSavedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="3"
+            android:gravity="top"
+            android:hint="@string/tv_wa_hint"
+            android:layout_centerHorizontal="true"
+            android:text="Hello"
+            android:padding="5dp"
+            android:textColor="@color/bg"
+            android:background="@android:color/transparent"/>
+
+
+    </RelativeLayout>
+
+    <!-- UNKNOWN CONTACTS LAYOUT-->
+    <RelativeLayout
+        android:id="@+id/unknownLayout"
+        android:layout_below="@+id/waExtendedLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rectangle"
+        android:padding="@dimen/padding_layout"
+        android:layout_margin="@dimen/margin_layout">
+
+        <TextView
+            android:id="@+id/tv_activate_unknown_contacts_service"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/tv_unknown_contacts_service"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_centerVertical="true"
+            />
+
+        <Switch
+            android:id="@+id/switch_activate_unknown_contacts_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:splitTrack="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
