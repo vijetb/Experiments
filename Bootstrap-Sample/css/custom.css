@@ -1,0 +1,26 @@
+/*This is a custom stylesheet*/
+body{
+    background: url("../img/bg.jpg");
+}
+
+.nav_links{
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav_header{
+    padding: 15px;
+    animation-name: nav_header_anim;
+    animation-duration: 10ms;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes nav_header_anim {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}

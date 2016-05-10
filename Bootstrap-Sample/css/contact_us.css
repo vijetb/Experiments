@@ -1,0 +1,28 @@
+/*This is a custom stylesheet*/
+body{
+    background: url("../img/bg.jpg");
+}
+
+section{
+    display: block;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    display: inline;
+
+}
+
+#contact_me_form{
+    width: 100%;
+    height:80%;
+    background-color: #4cae4c;
+}
+
+#contact_me_social_networking{
+    width: 100%;
+    height:20%;
+}

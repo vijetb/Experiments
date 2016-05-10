@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        ul{
+            list-style-type: none;
+            float: right;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        li{
+            display:inline;
+        }
+
+        #hor_header_line{
+            height: 5px;
+            background-color: red;
+            position: relative;
+            float: right;
+            clear:right;
+
+            /*clear: left;*/
+            /*animation: move-pen 1s ease-in infinite alternate;*/
+            animation: header_line_anim;
+            animation-duration: 1500ms;
+            animation-fill-mode:forwards;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes header_line_anim {
+            /*0% {background-color: red;}*/
+            /*25% {background-color: yellow;}*/
+            /*50% {background-color: blue;}*/
+            /*75% {background-color: orange;}*/
+            /*100% {background-color: moccasin;}*/
+
+            from {width: 0%}
+            to {width: 100%}
+        }
+
+        /*!*.move-pen{animation: move-pen 1s ease-in infinite alternate;}*!*/
+        /*@keyframes move-pen{*/
+            /*from{transform:translateX(-4px) rotate(6deg);}*/
+            /*to{transform:translateX(4px) rotate(-3deg);}*/
+        /*}*/
+    </style>
+</head>
+    <header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Contact Me</a></li>
+        </ul>
+        <div id="hor_header_line">
+
+        </div>
+    </header>
+<body>
+
+</body>
+</html>
