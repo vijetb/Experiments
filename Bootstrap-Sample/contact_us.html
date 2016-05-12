@@ -6,23 +6,64 @@
     <title>Contact-Me</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/contact_us.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<section id="contact_me_form">
-<p>aaa</p>
-</section>
-<section id="contact_me_social_networking">
-    <ul>
-        <li><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
-        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-        <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
-        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-        <li><i class="fa fa-github" aria-hidden="true"></i></li>
-        <li><i class="fa fa-pinterest" aria-hidden="true"></i></li>
-    </ul>
-</section>
+
+<div class="body-container">
+    <p id="contact_me_header">Contact me!</p>
+    <div class="contact_parent">
+    <div class="contact">
+        <p id="contact_desc">Have an idea to to share? Or want to share an interesting thing. Please do! Or just say hi...!</p>
+        <p><img src="img/loc_pin.png"/> Boston, Massachusetts </p>
+        <p><img src="img/phone.png"/> +1-857-277-9594 </p>
+        <p><img src="img/mail.png"/> bvijet@gmail.com </p>
+    </div>
+    </div>
+    <div class="contact_form_parent">
+    <div class="contact_form">
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="So that I can address you!">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="So that I can contact you!!">
+            </div>
+            <div class="form-group">
+                <label for="information">Message</label>
+                <textarea class="form-control" id="information" rows="8"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
+
+
+
+
+<div class="footer-container">
+        <div class="connect_me_header">
+            <p>CONNECT ME</p>
+        </div>
+        <hr>
+        <div class="social_media">
+            <div class="social_media_icons">
+                <img src="img/icon_fb.png" alt="Facebook"/>
+                <img src="img/icon_linkedin.png" alt="Twitter"/>
+                <img src="img/icon_gplus.png" alt="Twitter"/>
+                <img src="img/icon_linkedin.png" alt="Twitter"/>
+                <img src="img/icon_pintrest.png" alt="Twitter"/>
+                <img src="img/icon_git.png" alt="Twitter"/>
+            </div>
+        </div>
+    <div class="copyright">
+        <p>All rights reserved</p>
+    </div>
+</div>
 <!--Javascript-->
 <script src="http://code.jquery.com/jquery-latest.min.js"/>
 <script src="js/bootstrap.min.js"/>
