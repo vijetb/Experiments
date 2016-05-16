@@ -1,85 +1,100 @@
 /*This is a custom stylesheet*/
+
+* {
+    font-size: 1em;
+    font-family: "Titillium Web", sans-serif;
+    color: #c3c3c4;
+    line-height: 1.25em !important;
+}
+
 body{
     background: url("../img/bg.jpg");
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
 }
 
-
-/*BODY CONTAINER*/
-.body-container{
-    margin-left: 120px;
-    margin-top: 50px;
+/*CONTACT HEADER*/
+.contact-header{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 20px;
 }
 
-.contact{
-    float: right;
+/*CONTACT DETAILS*/
+.contact-details{
+    font-size: 20px;
 }
 
-#contact_me_header{
-    font-size: 22px;
-}
-
-.contact_form{
-    width: 80%;
-    float: left;
-}
-
-.contact_parent{
-    width: 50%;
-    float: left;
-}
-
-.contact_form_parent{
-    width: 50%;
-    float: left;
-}
-
-#name:focus #email:focus #information:focus{
-    border-color: rgba(82,168,236,.8);
-    border-style: solid;
-    border-width: 5px;
-    box-shadow: 0 0 8px rgba(82,168,236,.6) !important;
-}
-
-#contact_desc{
+.details-submission-form{
 
 }
 
-
-/*FOOTER CONTAINER*/
-.footer-container{
-    width: 100%;
-    position: fixed;
-    bottom: 0px;
+.visitor-msg, .visitor-email,.visitor-send-btn{
+    margin-top: 10px;
 }
 
-.copyright{
-    width: 100%;
-    text-align: center;
-    font-size: 12px;
+.visitor-name, .visitor-msg, .visitor-email,.visitor-send-btn{
+    margin-bottom: 10px;
+    border-radius: 0px;
+    background-color: white;
 }
 
-.social_media{
-    width: 100%;
+.visitor-send-btn{
+    background-color: #2196F3;
 }
 
-.social_media_icons{
+.glypicons-contact{
+    font-size: 24px;
+    color: #2196F3;
+}
+
+.contact-details h4{
+    font-size: 24px;
     text-align: center;
 }
 
-.social_media_icons img{
-    display: inline;
-}
-
-.social_media_icons img:hover{
-    box-shadow: 8px 8px 5px #888888;
-}
-
-.connect_me_header{
+.social-network{
     text-align: center;
-    margin: 0px;
-    padding: 0px;
 }
+
+.social-media-icon{
+    width: 45px;
+    height:45px;
+}
+
+.social-media-icon:hover{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* COPYRIGHT INFORMATION */
+.copyright-info{
+    padding: 12px 12px;
+    background-color: floralwhite;
+}
+
+.copyright-info p, .glyphicon-copyright-mark{
+    color:#000000;
+}
+.copyright-heart-icon{
+    color: red;
+    animation-name:rotate-360-repeated;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes rotate-360-repeated {
+    50%{transform:scale(1.1,1.1);}
+    100%{transform:scale(1.2,1.2);}
+}
+
 
