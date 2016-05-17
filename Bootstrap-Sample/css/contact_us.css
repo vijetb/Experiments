@@ -11,10 +11,14 @@ body{
     background: url("../img/bg.jpg");
 }
 
+.contact-heading{
+    top:0px;
+}
+
 /*CONTACT HEADER*/
 .contact-header{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 20px;
 }
 
@@ -60,22 +64,13 @@ body{
     height:45px;
 }
 
-.social-media-icon:hover{
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
 /* COPYRIGHT INFORMATION */
+
+footer{
+    position: absolute;
+    bottom:0px;
+    width: 100%;
+}
 .copyright-info{
     padding: 12px 12px;
     background-color: floralwhite;
