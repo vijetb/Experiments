@@ -5,19 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom_test.css" rel="stylesheet">
+    <!--SCROLLING PLUGIIN-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#app').fullpage({
+                //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                anchors: ['homePage', 'aboutMePage', 'educationPage', 'projectPage', 'expPage','friendsPage','contactMePage'],
+                menu: '#menu',
+                scrollingSpeed: 1000
+            });
+
+        });
+    </script>
+    <!--SCROLLING PLUGIIN END-->
+
 </head>
 <body>
-    <header id="nav_header">
-        <ul class="nav_links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Messages</a></li>
-        </ul>
-    </header>
-<!--Javascript-->
-    <script src="http://code.jquery.com/jquery-latest.min.js"/>
-    <script src="js/bootstrap.min.js"/>
+<!--NAVIGTION-BAR-->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="nav navbar-brand">Vijet - Portfolio</a>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right" id="menu">
+                <li data-menuanchor="homePage" class="active"><a href="#homePage">Home</a></li>
+                <li data-menuanchor="aboutMePage"><a href="#aboutMePage">About me</a></li>
+                <li data-menuanchor="educationPage"><a href="#educationPage">Education</a></li>
+                <li data-menuanchor="projectPage"><a href="#projectPage">Projects</a></li>
+                <li data-menuanchor="expPage"><a href="#expPage">Experience</a></li>
+                <li data-menuanchor="friendsPage"><a href="#friendsPage">Friends</a></li>
+                <li data-menuanchor="contactMePage"><a href="#contactMePage">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--NAVIGTION-BAR-END-->
+<div id="app">
+    <div class="section" id="section0">
+        <h1>HomePage</h1>
+    </div>
+    <div class="section" id="section1">
+        <h1>About me page! Coming soon</h1>
+    </div>
+    <div class="section" id="section2">
+        <h1>Education Page coming soon!!!</h1>
+    </div>
+    <div class="section" id="section3">
+        <h1>Project Page coming soon</h1>
+    </div>
+    <div class="section" id="section4">
+        <h1>Experience page coming soon</h1>
+    </div>
+    <div class="section" id="section5">
+        <h1>Friends page coming soon</h1>
+    </div>
+    <div class="section" id="section6">
+        <h1>Contact me page coming soon</h1>
+    </div>
+</div>
+
+
+
+<!--BOOTSTRAP Libraries-->
+<script type="text/javascript" src='js/bootstrap.min.js'></script>
 
 </body>
 </html>
