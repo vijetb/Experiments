@@ -8,7 +8,7 @@
     <link href="css/custom_test.css" rel="stylesheet">
     <link href="css/contact_us.css" rel="stylesheet">
     <link href="css/custom_education.css" rel="stylesheet">
-
+    <link href="css/custom_skill.css" rel="stylesheet">
     <!--FONTS-->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,300' rel='stylesheet' type='text/css' />
@@ -26,7 +26,7 @@
         $(document).ready(function() {
             $('#app').fullpage({
                 //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-                anchors: ['homePage', 'aboutMePage', 'educationPage', 'projectPage', 'expPage','friendsPage','contactMePage'],
+                anchors: ['homePage', 'aboutMePage', 'educationPage', 'skillsPage','projectPage', 'expPage','friendsPage','contactMePage'],
                 menu: '#menu',
 //                verticalCentered:false,
                 scrollingSpeed: 1000
@@ -56,6 +56,7 @@
                 <li data-menuanchor="homePage" class="active"><a href="#homePage">Home</a></li>
                 <li data-menuanchor="aboutMePage"><a href="#aboutMePage">About me</a></li>
                 <li data-menuanchor="educationPage"><a href="#educationPage">Education</a></li>
+                <li data-menuanchor="skillsPage"><a href="#skillsPage">Skills</a></li>
                 <li data-menuanchor="projectPage"><a href="#projectPage">Projects</a></li>
                 <li data-menuanchor="expPage"><a href="#expPage">Experience</a></li>
                 <li data-menuanchor="friendsPage"><a href="#friendsPage">Friends</a></li>
@@ -161,7 +162,7 @@
                     <h2><span class="collage-name">Karnataka Science College</span></h2>
                     <h4><span>Pre-University Course</span></h4>
                     <h4><span>Dharwad, Karnataka, India</span></h4>
-                    <h4><span class="glyphicon glyphicon-calendar edu-icons"></span> 2006-2012 | <span class="glyphicon glyphicon-education edu-icons"></span> Completed in 2012</h4>
+                    <h4><span class="glyphicon glyphicon-calendar edu-icons"></span> 2006-2008 | <span class="glyphicon glyphicon-education edu-icons"></span> Completed in 2012</h4>
 
                 </div>
                 <div class="neu-logo col-lg-4">
@@ -185,15 +186,122 @@
     </div>
     <!--EDUCATION PAGE END-->
     <div class="section" id="section3">
-        <h1>Project Page coming soon</h1>
+        <!--SKILLS SECTION-->
+        <div class="container section-header">
+            <h1>Skills</h1>
+            <h3>I am always fascinated about technology. Learning new tools and technologies has always been my passion. And, yeh I am hungry to update this list !!! </h3>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <h3 class="header-without-top-margin">Skillset</h3>
+                    <table class="table table-bordered skills-table">
+                        <tr>
+                            <td><strong>Language</strong></td>
+                            <td>Java, J2EE, Android</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Web Technologies</strong></td>
+                            <td>HTML5, CSS3, Javascript, AngularJS, Jquery</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Databases</strong></td>
+                            <td>MySQL,MongoDB, Sqlite</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Frameworks</strong></td>
+                            <td>Spring DI, Spring MVC, Hibernate, Webservices (REST/ SOAP), OSGi- Apache Felix, Java Messaging Service (JMS), Bosch M2M framework</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tools</strong></td>
+                            <td>Eclipse IDE, Android Studio,IntelliJ, WebStorm, Git, Maven, Gradle, Stash, Wiki – confluence</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="header-without-top-margin">Certifications</h3>
+                    <table class="table">
+                        <tr>
+                            <div class="row">
+                                <td class="col-lg-8">
+                                    <p>Mastering Regular expressions <a href="#"><span class="glyphicon glyphicon-link certification-link"/></a> </p>
+                                    Lynda.com<br>
+                                    February 2013 - Present
+                                </td>
+                                <td class="col-lg-4">
+                                    <img src="img/lyndalogo.png"  width="156px" height="64px" alt="Coursera"/>
+                                </td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="row">
+                                <td class="col-lg-8">
+                                    <p> M2M Certified Professional <a href="#"><span class="glyphicon glyphicon-link certification-link"/></a></p>
+                                    Bosch Software Innovations
+                                    License - ASDPB11111 | February 2013 - Present
+                                </td>
+                                <td class="col-lg-4">
+                                    <img src="img/bosch_logo.png"  width="156px" height="64px" alt="Coursera"/>
+                                    <!--"-->
+                                </td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="row">
+                                <td class="col-lg-8">
+                                    <p>MongoDB certificed professional <a href="#"><span class="glyphicon glyphicon-link certification-link"/></a></p>
+                                    MongoDB University
+                                    License - ASDPB11111 | February 2013 - Present
+                                </td>
+                                <td class="col-lg-4">
+                                    <img src="img/mongodb_univ.png"  width="156px" height="64px" style="background-color: #ffffff" alt="Coursera"/>
+                                    <!--"-->
+                                </td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="row">
+                                <td class="col-lg-8">
+                                    <p>Python Certification <a href="#"><span class="glyphicon glyphicon-link certification-link"/></a></p>
+                                    MongoDB University
+                                    License - ASDPB11111 | February 2013 - Present
+                                </td>
+                                <td class="col-lg-4">
+                                    <img src="img/coursera.jpg"  width="156px" height="64px" style="background-color: #ffffff" alt="Coursera"/>
+                                    <!--"-->
+                                </td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="row">
+                                <td class="col-lg-8">
+                                    <p>Python Certification <a href="#"><span class="glyphicon glyphicon-link certification-link"/></a></p>
+                                    MongoDB University
+                                    License - ASDPB11111 | February 2013 - Present
+                                </td>
+                                <td class="col-lg-4">
+                                    <img src="img/coursera.jpg"  width="156px" height="64px" alt="Coursera"/>
+                                    <!--"-->
+                                </td>
+                            </div>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--skills section end-->
     </div>
     <div class="section" id="section4">
-        <h1>Experience page coming soon</h1>
+        <h1>Project Page coming soon</h1>
     </div>
     <div class="section" id="section5">
+        <h1>Experience page coming soon</h1>
+    </div>
+    <div class="section" id="section6">
         <h1>Friends page coming soon</h1>
     </div>
-    <div class="section about-me" id="section6">
+    <div class="section about-me" id="section7">
 
         <div class="container contact-heading">
             <h2>My Contact</h2>
