@@ -1,0 +1,126 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom_projects.css" rel="stylesheet">
+    <!--FONTS-->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,300' rel='stylesheet' type='text/css' />
+
+    <!--SCROLLING PLUGIIN-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
+
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#app').fullpage({
+                //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                anchors: ['homePage', 'aboutMePage', 'educationPage', 'projectPage', 'expPage','friendsPage','contactMePage'],
+                menu: '#menu',
+                scrollingSpeed: 1000
+            });
+            var height = Math.max($(".project_wham").height(), $(".project_wham_type").height());
+            $(".project_wham").height(height);
+            $(".project_wham_type").height(height);
+        });
+    </script>
+    <!--SCROLLING PLUGIIN END-->
+
+</head>
+<body>
+<!--NAVIGTION-BAR-->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="nav navbar-brand">Vijet - Portfolio</a>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right" id="menu">
+                <li data-menuanchor="homePage" class="active"><a href="#homePage">Home</a></li>
+                <li data-menuanchor="aboutMePage"><a href="#aboutMePage">About me</a></li>
+                <li data-menuanchor="educationPage"><a href="#educationPage">Education</a></li>
+                <li data-menuanchor="projectPage"><a href="#projectPage">Projects</a></li>
+                <li data-menuanchor="expPage"><a href="#expPage">Experience</a></li>
+                <li data-menuanchor="friendsPage"><a href="#friendsPage">Friends</a></li>
+                <li data-menuanchor="contactMePage"><a href="#contactMePage">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--NAVIGTION-BAR-END-->
+
+<!--SKILLS SECTION-->
+<div class="container section-header">
+    <h1>Projects</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="thumbnail">
+                <h3 class="projName">WHAM</h3>
+                <h4 class="projName">Northeastern University</h4>
+            </div>
+
+        </div>
+        <div class="col-lg-4 project-class">
+            <h3 class="projName">Trash-2-Treasure</h3>
+            <h4 class="projName">Northeastern University</h4>
+        </div>
+        <div class="col-lg-4 project-class">
+            <h3 class="projName">HushVault</h3>
+            <h4 class="projName">Hobby Project</h4>
+        </div>
+    </div>
+
+    <div class="row">
+                <div class="col-lg-4">
+
+                    <div class="carousel slide" data-ride="carousel" data-interval="3000">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner yo" data-toggle="modal" data-target=".bs-example-modal-lg">
+                            <div class="item active">
+                                <div class="thumbnail project_wham">
+                                    <a href="#">
+                                    <h3 class="projName">What's Happening Around Me (WHAM)</h3>
+                                    <h4 class="projName">Northeastern University</h4></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumbnail project_wham_type">
+                                    <a href="#"><h3>WebApp</h3></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    Texting while driving not only endangers yourself but other people on the road as well. Texting while driving can limit your response to someone coming out of no where, whether if its a child, an adult, or a group of teens. Current Health Teens magazine identifies, when you text and drive there is "less time to response to a roadway danger" (Hang up and drive). When having less time to respond to something in the road while texting and driving it may lead to many accidents and deaths. In addition, the usage of your phone while driving can cause a dangerous environment to the people around you on the road. "Texting While Driving" states that texting and driving had become a "prominent social issue, and it is a most hazardous practice that risks accidents to drivers, cyclists, and pedestrians." (Texting While Driving). Anyone can walk into the road at any time of the day and staying off your phone prevents anyone including yourself from getting hurt. In the same way, texting while driving causes many dangers risking not only young teens lives, but also adult lives in future accidents. Cox agrues that texting and driving "causes own death and others, and need to pay attention to what's going on"(Cox). Meanwhile, driving needs to be taken more serious you never know what to expect on the road.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+<!--skills section end-->
+<!--BOOTSTRAP Libraries-->
+<script type="text/javascript" src='js/bootstrap.min.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+/*This is a custom stylesheet*/
+* {
+    font-size: 1em;
+    font-family: "Titillium Web", sans-serif;
+    color: #c3c3c4;
+    line-height: 1.25em !important;
+}
+
+
+body{
+    background-image: url(../img/bg.jpg);
+}
+
+.section-header{
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.project-class{
+    background-color: #A1887F;
+    border: solid 3px black;
+}
+
+.projName{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.project_wham_type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*.project_wham_type h3{*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
+
+/*.project_wham{*/
+    /*margin-top: 0;*/
+    /*padding-top: 0;*/
+    /*}*/
+
+.yo{
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
+
