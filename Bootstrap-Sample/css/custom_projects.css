@@ -28,25 +28,33 @@ body{
     padding-top: 0;
 }
 
+.project_wham{
+    background-color: #1DE9B6;
+}
+
 .project_wham_type{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #8c8c8c;
 }
 
-/*.project_wham_type h3{*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-/*}*/
+.modal-content{
+    background-color: #E0F7FA;
 
-/*.project_wham{*/
-    /*margin-top: 0;*/
-    /*padding-top: 0;*/
-    /*}*/
+}
 
-.yo{
-    /*display: flex;*/
-    /*justify-content: center;*/
+.borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none;
+    color: black;
+}
+
+.black-color{
+    color: black;
+}
+
+.tech-logos{
+    display: flex;
 }
 
 
