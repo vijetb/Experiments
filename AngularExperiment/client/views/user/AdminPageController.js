@@ -4,12 +4,12 @@
         .module("Vijet_Server")
         .controller("AdminPageController", AdminPageControllerImpl);
 
-    function AdminPageControllerImpl($scope, AdminDAOService, LocalBasketService,$uibModal, $log) {
+    function AdminPageControllerImpl($scope,$location, AdminDAOService, LocalBasketService,$uibModal, $log) {
         var vm = this;
         vm.addFriend = addNewFriend;
         vm.removeFriend = removeFriend;
         vm.inviteFriend = inviteFriend;
-       // vm.viewFriendProfile = viewFriendProfile;
+        vm.viewFriendProfile = viewFriendProfile;
 
         function init() {
             AdminDAOService
@@ -84,12 +84,10 @@
                 controller: 'InviteDialogController',
                 controllerAs: 'model'
             });
-            // AdminDAOService
-            //     .inviteFriend()
-            //     .then(function (res) {
-            //        console.log("friend invited");
-            //     });
+        };
 
+        function viewFriendProfile(friendId) {
+            $location.url("/friendProfilePage/"+friendId);
         };
     }
 })();

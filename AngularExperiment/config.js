@@ -44,10 +44,10 @@
                 // controller: "LoginController",
                 //controllerAs: "loginModel"
             })
-            .when("/friendDetailsPage", {
-                templateUrl: "client/views/user/friendDetails.view.client.html"
-                // controller: "AdminPageController",
-                // controllerAs: "model"
+            .when("/friendProfilePage/:friendId", {
+                templateUrl:  "client/views/user/FriendProfile.view.client.html",
+                controller:   "FriendProfileController",
+                controllerAs: "model"
             });
         // .otherwise(
         //     redirectTo("./client/views/user/login.view.client.html")

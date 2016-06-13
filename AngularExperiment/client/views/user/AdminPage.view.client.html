@@ -49,6 +49,7 @@
                         <tr>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Last Accessed Time</th>
                                 <th>Status</th>
                                 <th>Reset</th>
                                 <th>Invite</th>
@@ -59,6 +60,7 @@
                                 <tr ng-repeat="friend in model.friends" class="friend-entry">
                                         <td><a ng-click="model.viewFriendProfile(friend._id)" >{{friend.name}}</a></td>
                                         <td>{{friend.email}}</td>
+                                        <td>23-05-2016 12:45</td>
                                         <td ng-switch on="friend.status">
                                                 <p ng-switch-when="0" class="friend-status-created">Created</p>
                                                 <p ng-switch-when="1" class="friend-status-invited">Invited</p>

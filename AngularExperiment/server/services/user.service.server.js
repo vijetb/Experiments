@@ -5,6 +5,7 @@ module.exports = function (app) {
     app.post("/users/validateUser", validateUser);
     app.get("/users/forgotPassword", resetUserCredentials)
     app.get("/friends/friendList", getAllFriendList)
+    app.get("/friends/friendProfile/:friendId", getFriendProfile)
     app.post("/friends/addFriend", addFriend)
     app.post("/friends/removeFriend", removeFriend)
     app.post("/friends/inviteFriend", inviteFriend)
@@ -195,5 +196,11 @@ module.exports = function (app) {
         //     console.log('Message sent: ' + info.response);
         // });
 
+    };
+
+    function getFriendProfile(req,res) {
+        var pageId = req.params.friendId;
+        console.log("GET FRIEND PROFILE"+ pageId);
+        res.json({status:true});
     };
 }
