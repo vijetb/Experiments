@@ -1,0 +1,55 @@
+body{
+    background-image: url("../images/bg.jpg");
+    padding-top: 64px;
+    color: #c3c3c4;
+}
+
+.loginContainer{
+    max-width: 400px;
+}
+
+
+
+/*ADMIN PAGE*/
+.navbar-header{
+    margin-left:5px;
+    width:100%;
+}
+.admin-options{
+    margin-left: 8px;
+    margin-right: 8px;
+    text-decoration: none !important;
+}
+
+.admin-options:hover{
+    color:#FFAB00;
+}
+
+.add-friend-widget{
+    font-size: 96px;
+}
+
+.friend-entry{
+
+}
+
+.friend-entry a{
+    text-decoration: none !important;
+}
+
+.friend-entry a:hover{
+    color:#FFAB00;
+}
+
+.friend-status-created{
+    color:#BBDEFB;
+}
+
+.friend-status-invited{
+    color:#FFCDD2;
+}
+
+.friend-status-published{
+color:#1DE9B6;
+
+}

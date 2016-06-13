@@ -1,0 +1,79 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+                <div class="navbar-header">
+                        <h4 class="navbar-text pull-left">
+                                Welcome Vijet!
+                        </h4>
+                        <p class="navbar-text pull-right">
+                                <a href="#" class="admin-options">
+                                        <span class="glyphicon glyphicon-star"></span> Visit Website
+                                </a>
+                                <a href="#/login" class="admin-options">
+                                        <span class="glyphicon glyphicon-user"></span> Logout
+                                </a>
+
+                        </p>
+                </div>
+        </div>
+</nav>
+<div class="container">
+        <div ng-if="model.error" class="alert alert-danger" role="alert">{{model.error}} </div>
+        <div ng-if="model.success" class="alert alert-success" role="alert">{{model.success}} </div>
+
+        <div class="row">
+                <div class="col-lg-7 pull-left">
+                        <button class="btn btn-primary" >Resend Invitation</button>
+                </div>
+                <div class="col-lg-5 pull-right">
+
+                        <h2> Add Friend</h2>
+                        <form>
+                                <div class="form-group">
+                                        <input type="text" ng-model="name" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                        <input type="email" ng-model="emailId" class="form-control" placeholder="Email">
+                                </div>
+
+                                <div class="form-group">
+                                        <button type="button" ng-click="model.addFriend(name,emailId)" class="btn btn-primary btn-block">Add Friend</button>
+                                </div>
+
+                        </form>
+                </div>
+        </div>
+        <div class="row">
+                <h2>Friend's List</h2>
+                <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Reset</th>
+                                <th>Invite</th>
+                                <th>Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                                <tr ng-repeat="friend in model.friends" class="friend-entry">
+                                        <td><a ng-click="model.viewFriendProfile(friend._id)" >{{friend.name}}</a></td>
+                                        <td>{{friend.email}}</td>
+                                        <td ng-switch on="friend.status">
+                                                <p ng-switch-when="0" class="friend-status-created">Created</p>
+                                                <p ng-switch-when="1" class="friend-status-invited">Invited</p>
+                                                <p ng-switch-when="2" class="friend-status-published">Published</p>
+                                        </td>
+                                       <td class="text-center"><button type="button" class="btn btn-warning btn-sm">Reset Credentails</button></td>
+
+                                        <td class="text-center" ng-switch on="friend.invited">
+                                                <button type="button" ng-switch-when="0" class="btn btn-info btn-sm" ng-click="model.inviteFriend($index)">Invite</button>
+                                                <button type="button" ng-switch-default class="btn btn-info btn-sm" ng-click="model.inviteFriend($index)">Re-Invite</button>
+                                        </td>
+                                        <!--<td class="text-center"><button type="button" class="btn btn-info btn-sm" ng-click="model.inviteFriend($index)">Invite</button></td>-->
+                                        <td class="text-center" ><button type="button" ng-click="model.removeFriend($index)" class="btn btn-danger btn-sm">Delete</button></td>
+                                </tr>
+                        </tbody>
+                </table>
+        </div>
+</div>

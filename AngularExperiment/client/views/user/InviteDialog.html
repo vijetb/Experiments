@@ -1,0 +1,32 @@
+<div class="modal-header">
+    <h3 class="modal-title">Invite {{model.name}} ?</h3>
+</div>
+<div class="modal-body">
+    <div ng-if="model.error" class="alert alert-danger" role="alert">{{model.error}} </div>
+    <form>
+        <div class="form-group">
+            <p> Name: {{model.name}}</p>
+        </div>
+        <div class="form-group">
+            <p> Email: {{model.email}}</p>
+        </div>
+        <div class="form-group">
+            <label for="Message">Message</label>
+            <textarea class="form-control" ng-model="message" rows="5" value="model.message" id="Message"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="Admin Username">Admin Username</label>
+            <input type="text" ng-model="admin_username" class="form-control" placeholder="Admin Username" id="Admin Username">
+        </div>
+        <div class="form-group">
+            <label for="Admin Password">Admin Password</label>
+            <input type="password" ng-model="admin_password" class="form-control" placeholder="Admin Password" id="Admin Password">
+        </div>
+        </form>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="model.inviteDialogOkButtonClick(admin_username,admin_password,message)">OK</button>
+    <button class="btn btn-danger" type="button" ng-click="model.inviteDialogCancelButtonClick()">Cancel</button>
+</div>
