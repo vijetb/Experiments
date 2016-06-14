@@ -20,11 +20,12 @@
                 .validateUser(userEmail,password)
                 .then(function (response) {
                     console.log("Received response from server");
+                    console.log(response.data);
                     //handle response
                     if(response.data.status === true && response.data.isAdmin === true){
                         $location.url("/adminPage");
                     }else if(response.data.status === true && response.data.isAdmin === false){
-                        $location.url("/friendPage");
+                        $location.url("/friendPage/"+response.data._id);
                     }
                 });
         };

@@ -1,29 +1,29 @@
 <div class="container">
         <div class="row">
             <div class=" col-sm-4 profile-image-section">
-                <img src="../img/vijet_pic.png" class="img-circle center-block" width="150px" height="150px" alt="Profile picture"/>
+                <img src="" class="img-circle center-block" ng-model="friendImg" width="150px" height="150px" alt="Profile picture"/>
             </div>
             <div class=" col-sm-8">
                 <form role="form">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" ng-model="friendName" id="name">
                     </div>
                     <div class="form-group">
                         <label for="designation">Designation</label>
-                        <input type="text" class="form-control" id="designation">
+                        <input type="text" class="form-control" ng-model="friendDesignation" id="designation">
                     </div>
                     <div class="form-group">
                         <label for="company">Company</label>
-                        <input type="text" class="form-control" id="company">
+                        <input type="text" class="form-control" ng-model="friendCompany" id="company">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" ng-model="friendEmail" id="email">
                     </div>
                     <div class="form-group">
                         <label for="telephone">Telephone No</label>
-                        <input type="tel" class="form-control" id="telephone">
+                        <input type="tel" class="form-control" ng-model="friendPhoneNumber" id="telephone">
                     </div>
                 </form>
             </div>
@@ -33,13 +33,21 @@
             <form role="form">
                 <div class="form-group">
                     <label for="comment">What you have to say about Vijet?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <textarea class="form-control" rows="5" id="comment" ng-model="friendComment"></textarea>
                 </div>
             </form>
         </div>
         <div class="row">
-            <p>What Vijet has to say about you?</p>
-            <p class="myComment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+            <div ng-if="model.friend==true">
+                <p>What Vijet has to say about you?</p>
+                <p class="myComment" ng-model="adminComment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+            </div>
+            <div ng-if="model.friend==false">
+                <p>What Vijet has to say about you?</p>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5"  ng-model="adminComment"></textarea>
+                </div>
+            </div>
         </div>
 
         <div class="row">
@@ -62,39 +70,11 @@
                 <button class="btn btn-default" >View</button>
                 <button class="btn btn-danger" >Delete</button>
             </div>
-            <div class="fileUpload">
-                <span>abc.jpg</span>
-                <button class="btn btn-success" >Upload</button>
-                <button class="btn btn-default" >View</button>
-                <button class="btn btn-danger" >Delete</button>
-            </div>
-            <div class="fileUpload">
-                <span>abc.jpg</span>
-                <button class="btn btn-success" >Upload</button>
-                <button class="btn btn-default" >View</button>
-                <button class="btn btn-danger" >Delete</button>
-            </div>
-            <div class="fileUpload">
-                <span>abc.jpg</span>
-                <button class="btn btn-success" >Upload</button>
-                <button class="btn btn-default" >View</button>
-                <button class="btn btn-danger" >Delete</button>
-            </div>
-            <div class="fileUpload">
-                <span>abc.jpg</span>
-                <button class="btn btn-success" >Upload</button>
-                <button class="btn btn-default" >View</button>
-                <button class="btn btn-danger" >Delete</button>
-            </div>
-            <div class="fileUpload">
-                <span>abc.jpg</span>
-                <button class="btn btn-success" >Upload</button>
-                <button class="btn btn-default" >View</button>
-                <button class="btn btn-danger" >Delete</button>
-            </div>
             <div class="pull-right">
-                <button class="btn btn-default" >Preview</button>
-                <button class="btn btn-success" >Update Profile</button>
+                <button
+                        class="btn btn-success"
+                        ng-click="model.updateProfile(friendImg,friendName,friendDesignation,friendCompany,friendEmail,friendPhoneNumber, friendComment, adminComment)"
+                >Save</button>
             </div>
         </div>
 

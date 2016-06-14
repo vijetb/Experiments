@@ -34,10 +34,10 @@
                 controller: "AdminPageController",
                 controllerAs: "model"
             })
-            .when("/friendPage", {
-                templateUrl: "client/views/user/FriendPage.view.client.html"
-                // controller: "LoginController",
-                //controllerAs: "loginModel"
+            .when("/friendPage/:friendId", {
+                templateUrl: "client/views/user/FriendPage.view.client.html",
+                 controller: "FriendController",
+                controllerAs: "model"
             })
             .when("/DeleteDialog", {
                 templateUrl: "client/views/user/DeleteDialog.html"

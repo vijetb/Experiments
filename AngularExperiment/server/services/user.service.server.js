@@ -9,6 +9,10 @@ module.exports = function (app) {
     app.post("/friends/addFriend", addFriend)
     app.post("/friends/removeFriend", removeFriend)
     app.post("/friends/inviteFriend", inviteFriend)
+    app.post("/friends/updateFriendProfile", updateFriendProfile)
+    app.get("/friends/shortFriendProfile/:friendId", getShortFriendProfile)
+    app.put("/friends/profileStatus/", profileStatusInfo)
+
     var friendsList = [
         {_id:123,name:"Vijet Badigannavar",email:"bvijet@gmail.com",status:0,invited:0,password:"vijet"},
         {_id:234,name:"Kartik Chickkerur",email:"kartik@gmail.com",status:0,invited:0,password:"vvv"},
@@ -202,5 +206,29 @@ module.exports = function (app) {
         var pageId = req.params.friendId;
         console.log("GET FRIEND PROFILE"+ pageId);
         res.json({status:true});
+    };
+
+    function updateFriendProfile(req, res) {
+        var friendProfile = req.body;
+        console.log(friendProfile);
+        return res.json({status:true});
+    };
+
+    function getShortFriendProfile(req,res) {
+        var data = req.params.friendId;
+        console.log("%%%"+ data);
+        var friendPro = {
+          name: 'Bob',
+          lastLoginTime: new Date(),
+            noOfViews : 23,
+            publishStatus: true
+        };
+
+        return res.json(friendPro);
+    };
+
+    function profileStatusInfo(req, res) {
+        console.log(req.body);
+      return res.json({status:true});
     };
 }
