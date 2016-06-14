@@ -9,6 +9,7 @@
             updateFriendProfile: updateProfile,
             getShortFriendProfile: getShortFriendProfile,
             publishUnPublishProfile: publishUnpublishProfile,
+            updateFriendCredentails:updateFriendCredentails
         };
         return api;
 
@@ -25,7 +26,12 @@
         };
 
         function publishUnpublishProfile(pubUnPubReq) {
-            return $http.put("/friends/profileStatus/"+pubUnPubReq);
+            console.log(pubUnPubReq);
+            return $http.post("/friends/profileStatus/",pubUnPubReq);
         };
+
+        function updateFriendCredentails(updateCredenatilsReq){
+            return $http.post("/friends/updateProfileSettings/",updateCredenatilsReq);
+        }
     }
 })();

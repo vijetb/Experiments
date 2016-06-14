@@ -3,15 +3,16 @@ var nodemailer = require('nodemailer');
 module.exports = function (app) {
     //endpoints
     app.post("/users/validateUser", validateUser);
-    app.get("/users/forgotPassword", resetUserCredentials)
-    app.get("/friends/friendList", getAllFriendList)
-    app.get("/friends/friendProfile/:friendId", getFriendProfile)
-    app.post("/friends/addFriend", addFriend)
-    app.post("/friends/removeFriend", removeFriend)
-    app.post("/friends/inviteFriend", inviteFriend)
-    app.post("/friends/updateFriendProfile", updateFriendProfile)
-    app.get("/friends/shortFriendProfile/:friendId", getShortFriendProfile)
-    app.put("/friends/profileStatus/", profileStatusInfo)
+    app.get("/users/forgotPassword", resetUserCredentials);
+    app.get("/friends/friendList", getAllFriendList);
+    app.get("/friends/friendProfile/:friendId", getFriendProfile);
+    app.post("/friends/addFriend", addFriend);
+    app.post("/friends/removeFriend", removeFriend);
+    app.post("/friends/inviteFriend", inviteFriend);
+    app.post("/friends/updateFriendProfile", updateFriendProfile);
+    app.post("/friends/profileStatus/", updateProfileStatusInfo);
+    app.post("/friends/updateProfileSettings/", updateProfileSettings);
+    app.get("/friends/shortFriendProfile/:friendId", getShortFriendProfile);
 
     var friendsList = [
         {_id:123,name:"Vijet Badigannavar",email:"bvijet@gmail.com",status:0,invited:0,password:"vijet"},
@@ -218,7 +219,9 @@ module.exports = function (app) {
         var data = req.params.friendId;
         console.log("%%%"+ data);
         var friendPro = {
+           _id: 555,
           name: 'Bob',
+            email:"bob@gmail.com",
           lastLoginTime: new Date(),
             noOfViews : 23,
             publishStatus: true
@@ -227,8 +230,13 @@ module.exports = function (app) {
         return res.json(friendPro);
     };
 
-    function profileStatusInfo(req, res) {
+    function updateProfileStatusInfo(req, res) {
         console.log(req.body);
       return res.json({status:true});
     };
+
+    function updateProfileSettings(req,res) {
+        console.log(req.body);
+        return res.json({status:false});
+    }
 }

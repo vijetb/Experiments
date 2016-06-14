@@ -48,7 +48,7 @@
                 templateUrl:  "client/views/user/FriendProfile.view.client.html",
                 controller:   "FriendProfileController",
                 controllerAs: "model"
-            });
+            })
         // .otherwise(
         //     redirectTo("./client/views/user/login.view.client.html")
         // )
