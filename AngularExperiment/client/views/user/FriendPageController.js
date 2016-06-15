@@ -4,12 +4,14 @@
         .controller("FriendController", FriendControllerImpl);
     
     
-    function FriendControllerImpl($routeParams,$uibModal,FriendDAOService,LocalBasketService) {
+    function FriendControllerImpl($routeParams,$scope,$uibModal,$location, FriendDAOService,LocalBasketService) {
         var vm = this;
         var friendProfile = null;
         vm.publishProfile = publishProfile;
         vm.unPublishProfile = unpublishProfile;
         vm.updateProfileSettings = updateProfileSettings;
+        vm.updateProfile = updateProfile;
+
         function init() {
             FriendDAOService.getShortFriendProfile($routeParams.friendId)
                 .then(function (res) {
@@ -60,6 +62,10 @@
                 controller: 'UpdateFriendProfileSettingsController',
                 controllerAs: 'model'
             });
+        };
+
+        function updateProfile() {
+            $location.url("/friendProfilePage/"+555);
         };
     };
 })();
