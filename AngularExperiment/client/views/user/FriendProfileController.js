@@ -3,37 +3,47 @@
         .module("Vijet_Server")
         .controller("FriendProfileController", FriendControllerImpl);
 
-    function FriendControllerImpl($routeParams, FriendDAOService) {
+    function FriendControllerImpl($routeParams, $location, UserProfileDAOService) {
         var vm = this;
         var friendProfile = null;
         vm.updateProfile = updateProfile;
-        vm.friend = false;
-            function init() {
-            FriendDAOService.getFriendProfileInfo($routeParams.friendId)
+
+        console.log($routeParams.userId);
+        function init() {
+            UserProfileDAOService.getUserProfile($routeParams.userId)
                 .then(function (response) {
                     friendProfile = response.data;
-
-                    console.log("Client:" + friendProfile);
+                    vm.friendProfile = friendProfile;
                 });
         };
         
         init();
 
-        function updateProfile(friendImg,friendName,friendDesignation,friendCompany,friendEmail,friendPhoneNumber, friendComment, adminComment) {
-            var friendMsg = {
+        function updateProfile(dpURL,name,designation,company,email,telephoneNo, userComment, adminComment) {
+            var updatedProfile = {
                 _id: friendProfile._id,
-                imgUrl: friendImg,
-                friendName:friendName,
-                friendDesignation:friendDesignation,
-                friendCompany:friendCompany,
-                friendEmail:friendEmail,
-                friendPhoneNumber:friendPhoneNumber,
-                friendComment:friendComment,
-                adminComment:adminComment
+                //_id: "576165eef3fc607402c70b8d",
+                dpURL: dpURL,
+                name:name,
+                designation:designation,
+                company:company,
+                email:email,
+                telephoneNo:telephoneNo,
+                userComment:userComment,
+                adminComment:friendProfile.adminComment
+
+                //todo pictures
             };
-            FriendDAOService.updateFriendProfile(friendMsg)
+            console.log(adminComment);
+            UserProfileDAOService.updateUserProfile(updatedProfile)
                 .then(function (res) {
-                    console.log(res.data.status);
+                    if(res.data.status===1 || res.data.status===0){
+                        $location.url("/friendPage/"+friendProfile._id+"/"+res.data.status);
+                        return;
+                    }else{
+                        vm.error = "Error in saving the profile!"
+                        return;
+                    }
                 });
         };
         

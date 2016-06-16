@@ -34,9 +34,14 @@
                 controller: "AdminPageController",
                 controllerAs: "model"
             })
-            .when("/friendPage/:friendId", {
+            .when("/friendPage/:userId", {
                 templateUrl: "client/views/user/FriendPage.view.client.html",
                  controller: "FriendController",
+                controllerAs: "model"
+            })
+            .when("/friendPage/:userId/:status", {
+                templateUrl: "client/views/user/FriendPage.view.client.html",
+                controller: "FriendController",
                 controllerAs: "model"
             })
             .when("/DeleteDialog", {
@@ -44,7 +49,7 @@
                 // controller: "LoginController",
                 //controllerAs: "loginModel"
             })
-            .when("/friendProfilePage/:friendId", {
+            .when("/friendProfilePage/:userId", {
                 templateUrl:  "client/views/user/FriendProfile.view.client.html",
                 controller:   "FriendProfileController",
                 controllerAs: "model"

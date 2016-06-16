@@ -12,10 +12,12 @@
         vm.updateProfileSettings = updateProfileSettings;
         vm.updateProfile = updateProfile;
 
+        if($routeParams.status != null){
+            vm.msg = "Profile Updated!";
+        }
 
-        console.log($routeParams.friendId);
         function init() {
-            UserLoginDAOService.getShortUserProfile($routeParams.friendId)
+            UserLoginDAOService.getShortUserProfile($routeParams.userId)
                 .then(function (res) {
                     friendProfile = res.data;
                     console.log(friendProfile);
@@ -84,7 +86,7 @@
         };
 
         function updateProfile() {
-            $location.url("/friendProfilePage/"+555);
+            $location.url("/friendProfilePage/"+friendProfile._id);
         };
     };
 })();

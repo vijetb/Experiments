@@ -6,12 +6,12 @@
 
 module.exports = function() {
 
-    var userModel = require("./user/user.model.server")();
-    //var userProfileModel = require("./userprofile/")();
+    var userModel = require("./user/user.model.server.js")();
+    var userProfileModel = require("./userprofile/userprofile.model.server.js")();
 
     var models = {
-        userModel: userModel
-       // userProfileModel : userProfileModel
+        userModel: userModel,
+        userProfileModel : userProfileModel
     };
 
     return models;
