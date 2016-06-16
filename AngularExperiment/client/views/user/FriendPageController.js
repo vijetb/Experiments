@@ -4,7 +4,7 @@
         .controller("FriendController", FriendControllerImpl);
     
     
-    function FriendControllerImpl($routeParams,$scope,$uibModal,$location, FriendDAOService,LocalBasketService) {
+    function FriendControllerImpl($routeParams,$scope,$uibModal,$location, FriendDAOService,UserLoginDAOService,LocalBasketService) {
         var vm = this;
         var friendProfile = null;
         vm.publishProfile = publishProfile;
@@ -12,14 +12,17 @@
         vm.updateProfileSettings = updateProfileSettings;
         vm.updateProfile = updateProfile;
 
+
+        console.log($routeParams.friendId);
         function init() {
-            FriendDAOService.getShortFriendProfile($routeParams.friendId)
+            UserLoginDAOService.getShortUserProfile($routeParams.friendId)
                 .then(function (res) {
                     friendProfile = res.data;
+                    console.log(friendProfile);
                     vm.friendId = friendProfile._id;
                     vm.name = friendProfile.name;
                     vm.noOfViews = friendProfile.noOfViews;
-                    vm.lastLoginTime = friendProfile.lastLoginTime;
+                    vm.lastLoginTime = friendProfile.lastLogin;
                     vm.publishStatus = friendProfile.publishStatus;
                 });
         };
@@ -29,7 +32,7 @@
         init();
 
         $scope.$on("updateSettingsSuccessful", function(response) {
-            // show on alert that the update is successful.
+                vm.msg = "User Credentails updated !!!";
         });
 
         function publishProfile(friendId) {
@@ -37,9 +40,17 @@
                 _id:friendId,
                 isPublish : true
             }
-            FriendDAOService.publishUnPublishProfile(pubUnpubReq)
+            UserLoginDAOService.publishProfileStatus(pubUnpubReq)
                 .then(function (res) {
-                    console.log(res.data);
+                    if(res.data.status === true){
+                        vm.msg = "Your profile is published! Check the website to view your profile!";
+                        vm.publishStatus = true;
+                        return;
+                    }else{
+                        vm.error = "Error in publishing your profile!";
+                        vm.publishStatus = false;
+                        return;
+                    }
                 });
         };
 
@@ -48,9 +59,17 @@
                 _id:friendId,
                 isPublish : false
             }
-            FriendDAOService.publishUnPublishProfile(pubUnpubReq)
+            UserLoginDAOService.publishProfileStatus(pubUnpubReq)
                 .then(function (res) {
-                console.log(res.data);
+                    if(res.data.status === true){
+                        vm.msg = "Your profile is unpublished from the website!";
+                        vm.publishStatus = false;
+                        return;
+                    }else{
+                        vm.error = "Error in unpublishing your profile!";
+                        vm.publishStatus = true;
+                        return;
+                    }
             });
         };
 
@@ -76,7 +95,7 @@
         .module("Vijet_Server")
         .controller("UpdateFriendProfileSettingsController", updateFriendProfileControllerImpl);
 
-    function updateFriendProfileControllerImpl($uibModalInstance,$rootScope,LocalBasketService,FriendDAOService) {
+    function updateFriendProfileControllerImpl($uibModalInstance,$rootScope,LocalBasketService,UserLoginDAOService) {
         var friendInfo = null;
         var vm = this;
         vm.okButtonClick = okButtonClickListener;
@@ -98,18 +117,18 @@
 
             vm.error = null;
             var updateCredentialsReq = {
-              friendId: friendInfo._id,
+              userId: friendInfo._id,
               currentPassword:  currentPassword,
                 newPassword : newPassword1
             };
-            FriendDAOService.updateFriendCredentails(updateCredentialsReq)
+            UserLoginDAOService.updateUserCredentials(updateCredentialsReq)
                 .then(function (res) {
                     if(res.data.status === true){
                         $rootScope.$broadcast("updateSettingsSuccessful",true);
                         $uibModalInstance.close();
                     }else if(res.data.status === false){
                         vm.error = "Credentials seems to be wrong! Check the passwords!\n" +
-                            "If the problem still persists contact the admin";
+                            "If the problem still persists contact Vijet";
                     }
                 })
 

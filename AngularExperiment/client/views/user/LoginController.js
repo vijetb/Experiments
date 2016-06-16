@@ -4,31 +4,59 @@
         .controller("LoginController",LoginControllerImpl);
 
 
-    function LoginControllerImpl($location,UserLoginDAOService) {
+    function LoginControllerImpl($location,UserLoginDAOService, $uibModal) {
         var vm = this;
-        vm.validate = validateUserCredentails;
-
+        vm.validate = validateUserCredentails,
+        vm.loginHelp = loginHelp;
 
         function validateUserCredentails(userEmail, password){
             if(userEmail == null || password == null){
-                vm.error = "Empty credentials! Try again!!!";
+                vm.error = "Enter valid email/password";
                 return;
             }
 
-            //todo handle username, password
+            var userCredentials = {
+                email:userEmail,
+                password:password
+            };
             UserLoginDAOService
-                .validateUser(userEmail,password)
-                .then(function (response) {
-                    console.log("Received response from server");
-                    console.log(response.data);
-                    //handle response
-                    if(response.data.status === true && response.data.isAdmin === true){
+                .validateUser(userCredentials)
+                .then(function (res) {
+                    if(res.data==null){
+                        vm.error = "User doesn't exist!";
+                        return;
+                    }
+                    if(res.data.isAdmin === true){
                         $location.url("/adminPage");
-                    }else if(response.data.status === true && response.data.isAdmin === false){
-                        $location.url("/friendPage/"+response.data._id);
+                    }else{
+                        $location.url("/friendPage/"+res.data._id);
                     }
                 });
         };
 
+        function loginHelp() {
+            var modalInstance = $uibModal.open({
+                animation: true,
+                templateUrl: 'client/views/user/LoginHelpDialog.html',
+                controller: "LoginHelpController",
+                controllerAs: 'model'
+            });
+        };
+
     }
+})();
+
+(function() {
+    angular.module('Vijet_Server')
+        .controller("LoginHelpController", LoginHelpControllerImpl);
+
+        function LoginHelpControllerImpl($uibModalInstance) {
+           var vm = this;
+            vm.closeDialog = closeDialog;
+
+            function closeDialog() {
+                $uibModalInstance.close();
+            };
+        }
+
 })();

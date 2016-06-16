@@ -1,9 +1,13 @@
 var nodemailer = require('nodemailer');
 
-module.exports = function (app) {
+module.exports = function (app, models) {
+    var userModel = models.userModel;
+
     //endpoints
     app.post("/users/validateUser", validateUser);
-    app.get("/users/forgotPassword", resetUserCredentials);
+    app.put("/user/forgotPassword", resetUserCredentials);
+    app.put("/user/userSettings/", updateProfileStatusInfo);
+    app.put("/user/publishStatus/", updatepublishStatus);
     app.get("/friends/friendList", getAllFriendList);
     app.get("/friends/friendProfile/:friendId", getFriendProfile);
     app.post("/friends/addFriend", addFriend);
@@ -12,7 +16,7 @@ module.exports = function (app) {
     app.post("/friends/updateFriendProfile", updateFriendProfile);
     app.post("/friends/profileStatus/", updateProfileStatusInfo);
     app.post("/friends/updateProfileSettings/", updateProfileSettings);
-    app.get("/friends/shortFriendProfile/:friendId", getShortFriendProfile);
+    app.get("/user/shortProfile/:userId", getShortFriendProfile);
 
     var friendsList = [
         {_id:123,name:"Vijet Badigannavar",email:"bvijet@gmail.com",status:0,invited:0,password:"vijet"},
@@ -22,37 +26,97 @@ module.exports = function (app) {
     ];
 
     function validateUser(req,res) {
-        // extract the username and password from the request
-        // connect with the database and validate the username and password
         console.log("Under Validate User");
-        if(req.body.username === 'vijet@gmail.com' && req.body.password ==='vijet'){
-            var data = {
-                _id: 111,
-                status:true,
-                isAdmin:true
-            }
-            res.send(data);
-        }else if(req.body.username === 'bob@gmail.com' && req.body.password ==='bob'){
-            var data = {
-                _id: 111,
-                status:true,
-                isAdmin:false
-            }
-            res.send(data);
-        }
-        else{
-            res.send({status:false})
-        }
+        // if(req.body.username === 'vijet@gmail.com' && req.body.password ==='vijet'){
+        //     var data = {
+        //         _id: 111,
+        //         status:true,
+        //         isAdmin:true
+        //     }
+        //     res.send(data);
+        // }else if(req.body.username === 'bob@gmail.com' && req.body.password ==='bob'){
+        //     var data = {
+        //         _id: 111,
+        //         status:true,
+        //         isAdmin:false
+        //     }
+        //     res.send(data);
+        // }
+        // else{
+        //     res.send({status:false})
+        // }
+        
+        userModel.validateUser(req.body.email,req.body.password)
+            .then(function (user) {
+                      res.json(user);
+                      return;
+            });
 
     }
 
     function resetUserCredentials(req, res){
-        // extract the email from the request
-        // generate the code to reset the password
-        console.log("Under resetUserCredentials");
-        res.send("success");
+        console.log("Under reset Credentials");
+        var emailId = req.body.email;
+        var newPassword = randomPassword(emailId.length);
+        userModel.resetUserPassword(emailId,newPassword)
+            .then(function (rs) {
+                if(rs.nModified === 0){
+                    res.json({status:false});
+                }else{
+                    //TODO: send Email
+                    res.json({status:true});
+                }
+                return;
+            });
     }
     
+    
+    function updateUserSettings(req,res) {
+        console.log("under update User settings");
+        var userId  = req.body.userId;
+        var currentPassword = req.body.currentPassword;
+        var newPassword = req.body.newPassword;
+
+        userModel.getUserPassword(userId)
+            .then(function (userPassword) {
+                if(userPassword == null){
+                    res.json({status:false});
+                    return;
+                }else{
+                    if(userPassword.password === currentPassword){
+                        userModel.updateUserSettings(userId,newPassword)
+                            .then(function (updateStatus) {
+                                if(updateStatus.nModified === 0 ){
+                                    res.json({status:false});
+                                    return;
+                                }else{
+                                    res.json({status:true});
+                                    return;
+                                }
+                            });
+                    }else{
+                        res.json({status:false});
+                        return;
+                    }
+                }
+            })
+    };
+
+    function updatepublishStatus(req,res) {
+        console.log("under update PublishStatus");
+        var userId = req.body._id;
+        var isPublish = req.body.isPublish;
+        userModel.updateUserProfilePublishStatus(userId,isPublish)
+            .then(function (status) {
+                if(status.nModified===1){
+                    return res.json({status:true});
+                }else{
+                    return res.json({status:false});
+                }
+            })
+
+    };
+
     function getAllFriendList(req,res) {
         res.send(friendsList);
         return;
@@ -216,18 +280,12 @@ module.exports = function (app) {
     };
 
     function getShortFriendProfile(req,res) {
-        var data = req.params.friendId;
-        console.log("%%%"+ data);
-        var friendPro = {
-           _id: 555,
-          name: 'Bob',
-            email:"bob@gmail.com",
-          lastLoginTime: new Date(),
-            noOfViews : 23,
-            publishStatus: true
-        };
-
-        return res.json(friendPro);
+        var userId = req.params.userId;
+        userModel.getShortUserProfile(userId)
+            .then(function (userProfile) {
+                res.json(userProfile);
+                return;
+            });
     };
 
     function updateProfileStatusInfo(req, res) {

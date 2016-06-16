@@ -6,23 +6,40 @@
     function userDAOServiceImpl($http) {
         var api = {
             validateUser: findUserByCredentials,
-            resetUserCredentails: resetUserCredentials
+            resetUserCredentials: resetUserCredentials,
+            getShortUserProfile: getShortUserProfile,
+            updateUserCredentials: updateUserCredentials,
+            publishProfileStatus:publishProfileStatus
         };
         return api;
 
-        function findUserByCredentials(username, password) {
-            console.log("under find user by credentials");
-            var url = "/users/validateUser";
-            var user = {
-                username:username,
-                password:password
-            };
-            return $http.post(url,user);
-        }
+        /**
+         * Returns the user if exists, otherwise returns null.
+         */
+        function findUserByCredentials(userCredentials) {
+            return $http.post("/users/validateUser",userCredentials);
+        };
 
-        function resetUserCredentials(username) {
 
-        }
+        /**
+         * Reset the credentials of the user
+         * @param username
+         */
+        function resetUserCredentials(email) {
+            return $http.put("/user/forgotPassword",email);
+        };
+
+        function getShortUserProfile(userId) {
+            return $http.get("/user/shortProfile/"+userId);
+        };
+        
+        function updateUserCredentials(userCredentials) {
+            return $http.put("/user/userSettings/",userCredentials);
+        };
+
+        function publishProfileStatus(publishStatus) {
+            return $http.put("user/publishStatus/",publishStatus);
+        };
 
 
     }
