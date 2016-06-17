@@ -88,3 +88,32 @@ color:#1DE9B6;
 }
 
 /*FRIEND PAGE END*/
+
+
+
+/*FRIEND PAGE PROFILE*/
+.imageClass{
+    background-color: aquamarine;
+    width: 250px;
+    height: 250px;
+    border-radius: 120px;
+    text-align: center;
+}
+
+.imgOptions{
+    padding: 10px;
+    background-color: #dddddd;
+    border-radius: 120px;
+}
+.glyphicon.glyphicon-trash {
+    font-size: 36px;
+}
+
+.glyphicon.glyphicon-pencil {
+    font-size: 36px;
+    padding: 10px;
+}
+
+.uploadImageSection{
+    top: 125px;
+}/*FRIEND PAGE PROFILE END*/

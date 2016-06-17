@@ -3,13 +3,17 @@
         .module("Vijet_Server")
         .controller("FriendProfileController", FriendControllerImpl);
 
-    function FriendControllerImpl($routeParams, $location, UserProfileDAOService) {
+    function FriendControllerImpl($routeParams, $location, $uibModal, UserProfileDAOService) {
         var vm = this;
         var friendProfile = null;
         vm.updateProfile = updateProfile;
+        vm.removePicButtonClick =  removeButtonClick;
+        vm.addPicButtonClick = addButtonClick;
 
         console.log($routeParams.userId);
         function init() {
+            setupAnimationForDisplayPicture();
+
             UserProfileDAOService.getUserProfile($routeParams.userId)
                 .then(function (response) {
                     friendProfile = response.data;
@@ -46,7 +50,78 @@
                     }
                 });
         };
-        
+
+        function addButtonClick() {
+            console.log("Under Add button Click");
+            var modalInstance = $uibModal.open({
+                animation: true,
+                templateUrl: 'client/views/user/UploadImageDialog.html',
+                controller: 'UploadImageController',
+                controllerAs: 'model'
+            });
+        };
+
+        function removeButtonClick() {
+            console.log("Under Remove Button Click");
+        };
+
+
+        function setupAnimationForDisplayPicture() {
+            var circleHeight = $(".imageClass").height()/2;
+            console.log(circleHeight);
+            $(".deletePic").css({ top: circleHeight }).hide();
+            $(".editPic").css({ top: circleHeight }).hide();
+
+            $(".imageClass").mouseenter(function(){
+                $(".deletePic").fadeIn().show();
+                $(".editPic").fadeIn().show();
+            });
+
+            $(".imageClass").mouseleave(function() {
+                $(".deletePic").fadeOut();
+                $(".editPic").fadeOut();
+            });
+        };
     };
 
+})();
+
+(function(){
+    angular.module('Vijet_Server')
+        .controller("UploadImageController", uploadImageControllerImpl);
+
+    function uploadImageControllerImpl($uibModalInstance, $scope) {
+        var vm = this;
+
+        vm.okButtonClick = okButtonClick;
+        vm.cancelButtonClick = cancelButtonClick;
+        vm.fileChange = handleFileSelect;
+        vm.myCroppedImage = null;
+
+
+        $scope.myImage='';
+        $scope.myCroppedImage='';
+
+        var handleFileSelect=function(evt) {
+            console.log("Handle File Change");
+            // var file=evt.currentTarget.files[0];
+            // var reader = new FileReader();
+            // reader.onload = function (evt) {
+            //     $scope.$apply(function($scope){
+            //         $scope.myImage=evt.target.result;
+            //     });
+            // };
+            // reader.readAsDataURL(file);
+        };
+        angular.element(document.querySelector('#fileInput')).on('change',handleFileSelect);
+
+
+        function okButtonClick() {
+
+        };
+
+        function cancelButtonClick() {
+            $uibModalInstance.close();
+        };
+    };
 })();

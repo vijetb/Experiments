@@ -16,9 +16,9 @@
 
         $routeProvider
 
-        // .when("/", {
-        //     templateUrl: "views/home.html"
-        // })
+            .when("/experiment", {
+                templateUrl: "Experiment.html"
+            })
             .when("/login", {
                 templateUrl: "client/views/user/login.view.client.html",
                 controller: "LoginController",

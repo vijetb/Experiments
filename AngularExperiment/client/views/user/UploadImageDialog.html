@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h3 class="modal-title">Upload Display Picture</h3>
+</div>
+<div class="modal-body">
+    <div>Select an image file: <input type="file" id="fileInput" ng-change="model.fileChange()"/></div>
+    <div class="cropArea">
+        <img-crop image="model.myImage" result-image="model.myCroppedImage"></img-crop>
+    </div>
+    <div><img ng-src="{{model.myCroppedImage}}" /></div>
+    <!--<div ng-if="model.error" class="alert alert-danger" role="alert">{{model.error}} </div>-->
+
+    <!--<form>-->
+        <!--<div class="form-group">-->
+            <!--<p> Name: {{model.name}}</p>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<p> Email: {{model.email}}</p>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<input type="text" ng-model="admin_username" class="form-control" placeholder="Admin Username">-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<input type="password" ng-model="admin_password" class="form-control" placeholder="Admin Password">-->
+        <!--</div>-->
+    <!--</form>-->
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="model.okButtonClick()">OK</button>
+    <button class="btn btn-danger" type="button" ng-click="model.cancelButtonClick()">Cancel</button>
+</div>

@@ -2,9 +2,18 @@
     <div ng-if="model.error" ng-if="model.error" class="alert alert-danger" role="alert">{{model.error}} </div>
 
     <div class="row">
-            <div class=" col-sm-4 profile-image-section">
-                <img src="" class="img-circle center-block" ng-model="model.friendProfile.dpURL" width="150px" height="150px" alt="Profile picture"/>
+            <!--<div class=" col-sm-4 profile-image-section">-->
+                <!--<img src="" class="img-circle center-block" ng-model="model.friendProfile.dpURL" width="150px" height="150px" alt="Profile picture"/>-->
+            <!--</div>-->
+
+
+        <div class=" col-sm-4 imageClass profile-image-section">
+            <div class="uploadImageSection">
+                <span ng-click = "model.removePicButtonClick()" class="glyphicon glyphicon-trash deletePic imgOptions" title="Remove Picture"></span>
+                <span ng-click = "model.addPicButtonClick()" class="glyphicon glyphicon-pencil editPic imgOptions" title="Upload Picture"></span>
             </div>
+        </div>
+
             <div class=" col-sm-8">
                 <form role="form">
                     <div class="form-group">
