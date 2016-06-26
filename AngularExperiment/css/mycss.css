@@ -9,10 +9,66 @@
 
 body{
     background-image: url("../images/bg.jpg");
-    padding-top: 64px;
+    padding-top: 32px !important;
     color: #c3c3c4;
 }
 
+
+.vijet-desc strong{
+    color: #ffffff;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.vijet-desc-content{
+    display: inline;
+    display:inline;
+    float:left;
+    margin:0;
+}
+
+.listHolder{
+    overflow:hidden;
+}
+
+#testList{
+    padding: 0;
+    list-style-type: none;
+    margin:0;
+    animation: animChange 10s linear 0.3s infinite normal none;
+}
+
+#testList li{
+
+    font-size: 35px;
+    color: #1DE9B6;
+    font-family: 'Risque', cursive;
+}
+
+@keyframes animChange {
+    0%, 12%   {transform:translateY(0);}
+    18%, 24% {transform:translateY(-16%);}
+    30%, 36% {transform:translateY(-32%);}
+    42%, 48% {transform:translateY(-48%);}
+    54%, 60% {transform:translateY(-66%);}
+    66%, 72% {transform:translateY(-84%);}
+
+    /*0%, 9%   {transform:translateY(0);}*/
+    /*10%, 19% {transform:translateY(-16%);}*/
+    /*20%, 29% {transform:translateY(-32%);}*/
+    /*30%, 39% {transform:translateY(-48%);}*/
+    /*40%, 49% {transform:translateY(-66%);}*/
+    /*50%, 59% {transform:translateY(-84%);}*/
+    /*60%, 69% {transform:translateY(-66%);}*/
+    /*70%, 79% {transform:translateY(-48%);}*/
+    /*80%, 89% {transform:translateY(-32%);}*/
+    /*90%, 99% {transform:translateY(0%);}*/
+    /*16%, 24% {transform:translateY(-16%);}*/
+    /*32%, 40% {transform:translateY(-32%);}*/
+    /*64%, 72% {transform:translateY(-48%);}*/
+    /*80%, 88% {transform:translateY(-66%);}*/
+    /*96%, 99% {transform:translateY(-84%);}*/
+}
 /*NAV BAR*/
 .navbar{
     padding-right: 15px;
@@ -66,17 +122,57 @@ body{
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    .vijet-desc strong{
+        font-size: 35px;
+    }
 
+    .vijet-desc-content {
+        font-size: 25px;
+    }
+    .listHolder {
+        height: 30px;
+    }
+
+    #testList li {
+        font-size: 25px;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .vijet-desc strong{
+        font-size: 45px;
+    }
 
+    .listHolder {
+        height: 40px;
+    }
+
+    #testList li {
+       font-size: 34px;
+    }
+    .vijet-desc-content {
+        font-size: 34px;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    .vijet-desc strong{
+        font-size: 45px;
+    }
 
+    .listHolder {
+        height: 40px;
+    }
+
+    #testList li {
+       font-size: 35px;
+    }
+
+    .vijet-desc-content {
+        font-size: 35px;
+    }
 }
 
 
