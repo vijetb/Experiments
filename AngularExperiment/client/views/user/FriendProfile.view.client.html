@@ -55,24 +55,27 @@
 
         <div class="row">
             <p>Want to share any of the pics/ selfies on the profile ?</p>
-            <div class="fileUpload">
-                <span>abc.jpg</span>
-                <button class="btn btn-success" >Upload</button>
-                <button class="btn btn-default" >View</button>
-                <button class="btn btn-danger" >Delete</button>
+
+            <div ng-repeat="pic in model.numberOfPics">
+                <div class="fileUpload">
+                    <span>abc.jpg</span>
+                    <button class="btn btn-success" ng-click="model.addFile()" >Upload</button><input type="file" id="firstFile" ng-hide="true">
+                    <button class="btn btn-default" >View</button>
+                    <button class="btn btn-danger" >Delete</button>
+                </div>
             </div>
-            <div class="fileUpload">
-                <span>abc.jpg</span>
-                <button class="btn btn-success fileuploadSectionBtn" >Upload</button>
-                <button class="btn btn-default" >View</button>
-                <button class="btn btn-danger" >Delete</button>
-            </div>
-            <div class="fileUpload">
-                <span>abc.jpg</span>
-                <button class="btn btn-success" >Upload</button>
-                <button class="btn btn-default" >View</button>
-                <button class="btn btn-danger" >Delete</button>
-            </div>
+            <!--<div class="fileUpload">-->
+                <!--<span>abc.jpg</span>-->
+                <!--<button class="btn btn-success" ng-click="model.addFile()" >Upload</button><input type="file" id="firstFile" ng-hide="true">-->
+                <!--<button class="btn btn-default" >View</button>-->
+                <!--<button class="btn btn-danger" >Delete</button>-->
+            <!--</div>-->
+            <!--<div class="fileUpload">-->
+                <!--<span class="glyphicon glyphicon-plus" ng-click="model.addNewPic()"></span>-->
+                <!--&lt;!&ndash;<button class="btn btn-success fileuploadSectionBtn" >Upload</button>&ndash;&gt;-->
+                <!--&lt;!&ndash;<button class="btn btn-default" >View</button>&ndash;&gt;-->
+                <!--&lt;!&ndash;<button class="btn btn-danger" >Delete</button>&ndash;&gt;-->
+            <!--</div>-->
             <div class="pull-right">
                 <button
                         class="btn btn-success"

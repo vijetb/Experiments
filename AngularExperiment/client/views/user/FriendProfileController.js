@@ -9,6 +9,9 @@
         vm.updateProfile = updateProfile;
         vm.removePicButtonClick =  removeButtonClick;
         vm.addPicButtonClick = addButtonClick;
+        vm.addFile = addNewFile;
+        vm.addNewPic = addNewPic;
+        vm.numberOfPics = [{url:'abc',uploaded:true}];
 
         console.log($routeParams.userId);
         function init() {
@@ -63,6 +66,15 @@
 
         function removeButtonClick() {
             console.log("Under Remove Button Click");
+        };
+
+        function addNewFile() {
+          console.log("Under new file");
+            $("#firstFile").trigger('click');
+        };
+        
+        function addNewPic(){
+            console.log("Under add new pic");
         };
 
 

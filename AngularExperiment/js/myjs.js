@@ -15,4 +15,20 @@ $(document).ready(function () {
         $(".deletePic").fadeOut();
         $(".editPic").fadeOut();
     });
+
+    $('#fullpage').fullpage({
+        sectionsColor: ['#ff0000', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['homePage', 'aboutMePage', 'educationPage', 'skillsPage','projectPage', 'expPage','friendsPage','contactMePage'],
+        menu: '#menu',
+        scrollOverflow:true,
+        scrollingSpeed: 1000
+    });
+//     $('#app').fullpage({
+//         //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+//         anchors: ['homePage', 'aboutMePage', 'educationPage', 'skillsPage','projectPage', 'expPage','friendsPage','contactMePage'],
+//         menu: '#menu',
+// //                verticalCentered:false,
+//         scrollingSpeed: 1000
+//
+//     });
 });
