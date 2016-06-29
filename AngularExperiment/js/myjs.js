@@ -22,6 +22,7 @@ $(document).ready(function () {
         menu: '#menu',
         scrollOverflow:true,
         autoScrolling:false,
+        verticalCentered:false,
         css3:true,
         scrollingSpeed: 1000
     });
@@ -29,12 +30,4 @@ $(document).ready(function () {
     var height = $("#myimage").height()/2;
     $(".vijet-desc").css({'margin-top':height});
 
-//     $('#app').fullpage({
-//         //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-//         anchors: ['homePage', 'aboutMePage', 'educationPage', 'skillsPage','projectPage', 'expPage','friendsPage','contactMePage'],
-//         menu: '#menu',
-// //                verticalCentered:false,
-//         scrollingSpeed: 1000
-//
-//     });
 });

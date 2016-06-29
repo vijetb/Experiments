@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,300' rel='stylesheet' type='text/css' />
 
+
     <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -68,11 +69,11 @@
                     <li data-menuanchor="homePage"><a href="#homePage">Home</a></li>
                     <li data-menuanchor="aboutMePage"><a href="#aboutMePage">About me</a></li>
                     <li data-menuanchor="educationPage"><a href="#educationPage">Education</a></li>
-                    <li><a href="#skillsPage">Skills</a></li>
-                    <li><a href="#projectPage">Projects</a></li>
-                    <li><a href="#expPage">Experience</a></li>
-                    <li><a href="#friendsPage">Friends</a></li>
-                    <li><a href="#contactMePage">Contact Me</a></li>
+                    <li data-menuanchor="skillsPage"><a href="#skillsPage">Skills</a></li>
+                    <li data-menuanchor="projectPage"><a href="#projectPage">Projects</a></li>
+                    <li data-menuanchor="expPage"><a href="#expPage">Experience</a></li>
+                    <li data-menuanchor="friendsPage"><a href="#friendsPage">Friends</a></li>
+                    <li data-menuanchor="contactMePage"><a href="#contactMePage">Contact Me</a></li>
                 </ul>
             </div>
         <!--</div>-->
@@ -84,15 +85,16 @@
             <!--<h1>HomePage</h1>-->
         <!--</div>-->
     <!--</div>-->
-    <div class="container">
+
         <div id="fullpage">
             <div class="section" id="section0">
+                <div class="container">
                 <div class="row">
 
-                    <div class="col-xs-6 col-xs-offset-1">
+                    <div class="col-xs-6">
                         <img src="images/vijet_pic.png" width="100%" height="100%" id="myimage"/>
                     </div>
-                    <div class="col-xs-5 ">
+                    <div class="col-xs-6 ">
                         <p class="vijet-desc"><strong>VIJET BADIGANNAVAR</strong></p>
                         <span class="vijet-desc-content">I am a</span>
                         <div class="listHolder">
@@ -107,11 +109,81 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
             <div class="section" id="section1"><div>Section1</div></div>
             <div class="section" id="section2"><div>Section2</div></div>
             <div class="section" id="section3"><div>Section3</div></div>
+            <div class="section" id="section4"><div>Section4</div></div>
+            <div class="section" id="section5"><div>Section5</div></div>
+            <div class="section" id="section6"><div>Section6</div></div>
+
+            <!--CONTACT-ME PAGE-->
+            <div class="section contact-me-section" id="section7">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="section-heading">MY CONTACT</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-offset-3 col-xs-8 col-sm-3 col-sm-offset-0 col-md-2 col-md-offset-0">
+                            <img src="images/vijet.png" class="img-responsive img-circle vijet-image" alt="Vijet Badigannavar" width="130px" height="130px"/>
+                        </div>
+                        <div class="col-xs-12 col-sm-9 col-md-10">
+                            <h2 class="contact_me_dialogue"> Have an idea to share or want to discuss something? Please do !!! Or just say Hi !!!</h2>
+                        </div>
+                        </div>
+                </div>
+                    <!--<div class="row">-->
+                        <!--<div class="col-sm-4">-->
+                            <!--<img src="images/vijet.png" class="img-responsive img-circle vijet-image" alt="Vijet Badigannavar" width="130px" height="130px"/>-->
+                        <!--</div>-->
+                        <!--<div class="col-sm-8">-->
+                            <!--<h2 class="contact_me_dialogue"> Have an idea to share or want to discuss something? Please do !!! Or just say Hi !!!</h2>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="contact_address_row col-lg-6">-->
+                            <!--<table class="table table-bordered contact-me-address-table">-->
+                        <!--<tr>-->
+                            <!--<td><span class="glyphicon glyphicon-map-marker glypicons-contact"></span> Boston, Massachusetts</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td><span class="glyphicon glyphicon-envelope glypicons-contact"></span> bvijet@gmail.com</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td><span class="glyphicon glyphicon-earphone glypicons-contact"></span> +1-857-277-9594</td>-->
+                        <!--</tr>-->
+                            <!--</table>-->
+                        <!--</div>-->
+                    <!--<h4 style="text-align: center">CONNECT ME </h4>-->
+                    <!--<div class="social-network col-lg-6">-->
+                        <!--<img src="images/fb.png" class="social-media-icon"/>-->
+                        <!--<img src="images/twitter.png" class="social-media-icon"/>-->
+                        <!--<img src="images/gplus.png" class="social-media-icon"/>-->
+                        <!--<img src="images/linkedin.png" class="social-media-icon"/>-->
+                        <!--<img src="images/github.png" class="social-media-icon"/>-->
+                        <!--<img src="images/instagram.png" class="social-media-icon"/>-->
+                        <!--<img src="images/pinterst.png" class="social-media-icon"/>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                        <!--<div class="details-submission-form col-lg-8">-->
+                            <!--<form class="form-horizontal">-->
+                                <!--<input type="text" class="form-control visitor-name" placeholder="Your Name">-->
+                                <!--<input type="text" class="form-control visitor-email" placeholder="Your Email address">-->
+                                <!--<textarea class="form-control visitor-msg" rows="5" placeholder="Message"></textarea>-->
+                                <!--<button type="button" class="btn btn-primary btn-lg btn-block visitor-send-btn">Send</button>-->
+                            <!--</form>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="navbar navbar-inverse navbar-fixed-bottom copyright-info" role="navigation">
+                    <p class="pull-right">
+                    <span class="glyphicon glyphicon-copyright-mark"></span> 2016 <span class="glyphicon glyphicon glyphicon-heart copyright-heart-icon"></span> Vijet Badigannavar. All rights reserved.
+                    </p>
+                </div>
+            <!--</div>-->
+
         </div>
-    </div>
 </body>
 </html>

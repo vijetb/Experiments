@@ -11,6 +11,7 @@ body{
     background-image: url("../images/bg.jpg");
     padding-top: 32px !important;
     color: #c3c3c4;
+
 }
 
 
@@ -28,6 +29,7 @@ body{
 }
 
 .listHolder{
+    height: 15px;
     overflow:hidden;
 }
 
@@ -35,23 +37,23 @@ body{
     padding: 0;
     list-style-type: none;
     margin:0;
-    animation: animChange 10s linear 0.3s infinite normal none;
+    animation: animChange 16s linear 0.3s infinite normal none;
 }
 
 #testList li{
 
-    font-size: 35px;
+    /*font-size: 35px;*/
     color: #1DE9B6;
     font-family: 'Risque', cursive;
 }
 
 @keyframes animChange {
-    0%, 12%   {transform:translateY(0);}
-    18%, 24% {transform:translateY(-16%);}
-    30%, 36% {transform:translateY(-32%);}
-    42%, 48% {transform:translateY(-48%);}
-    54%, 60% {transform:translateY(-66%);}
-    66%, 72% {transform:translateY(-84%);}
+    /*0%, 12%   {transform:translateY(0);}*/
+    /*18%, 24% {transform:translateY(-16%);}*/
+    /*30%, 36% {transform:translateY(-32%);}*/
+    /*42%, 48% {transform:translateY(-48%);}*/
+    /*54%, 60% {transform:translateY(-66%);}*/
+    /*66%, 72% {transform:translateY(-84%);}*/
 
     /*0%, 9%   {transform:translateY(0);}*/
     /*10%, 19% {transform:translateY(-16%);}*/
@@ -63,6 +65,19 @@ body{
     /*70%, 79% {transform:translateY(-48%);}*/
     /*80%, 89% {transform:translateY(-32%);}*/
     /*90%, 99% {transform:translateY(0%);}*/
+
+    0%, 9%   {transform:translateY(0);}
+    10%, 19% {transform:translateY(-16%);}
+    20%, 29% {transform:translateY(-32%);}
+    30%, 39% {transform:translateY(-48%);}
+    40%, 49% {transform:translateY(-66%);}
+    50%, 59% {transform:translateY(-84%);}
+    60%, 69% {transform:translateY(-66%);}
+    70%, 79% {transform:translateY(-48%);}
+    80%, 89% {transform:translateY(-32%);}
+    90%, 99% {transform:translateY(0%);}
+
+
     /*16%, 24% {transform:translateY(-16%);}*/
     /*32%, 40% {transform:translateY(-32%);}*/
     /*64%, 72% {transform:translateY(-48%);}*/
@@ -136,6 +151,14 @@ body{
     #testList li {
         font-size: 25px;
     }
+    /*CONTACT ME PAGE*/
+    .contact_me_dialogue{
+        font-size: 22px !important;
+    }
+
+    .copyright-info{
+        font-size: 14px !important;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -153,6 +176,30 @@ body{
     }
     .vijet-desc-content {
         font-size: 34px;
+    }
+
+    /*CONTACT ME PAGE*/
+    .contact_address_row{
+        display:none;
+        margin:0;
+    }
+
+    .contact-me-address-table{
+        max-width: 300px;
+        margin: 0;
+    }
+
+    .social-media-icon{
+        width: 48px;
+        height:48px;
+    }
+
+    .copyright-info{
+        font-size: 14px !important;
+    }
+
+    .contact_me_dialogue{
+        font-size: 24px !important;
     }
 }
 
@@ -173,18 +220,94 @@ body{
     .vijet-desc-content {
         font-size: 35px;
     }
+
+    /*CONTACT ME PAGE*/
+    .copyright-info{
+        font-size: 14px !important;
+    }
+
+    .contact_me_dialogue{
+        font-size: 24px !important;
+    }
 }
-
-
-
-
-
 
 .loginContainer{
     max-width: 400px;
 }
 
 
+
+/*CONTACT PAGE SECTION*/
+.section-heading{
+    font-family: 'Risque', cursive;
+    padding: 12px;
+}
+
+.contact_address_row{
+    display:block;
+    margin:auto;
+}
+.contact_me_dialogue{
+    font-family: 'Risque', cursive;
+    font-size: 18px;
+    padding: 12px;
+}
+.glypicons-contact{
+    font-size: 16px;
+    color: #2196F3;
+}
+.contact-me-address-table{
+    max-width: 250px;
+    margin: 0 auto;
+}
+.social-network{
+    text-align: center;
+}
+.social-media-icon{
+    width: 32px;
+    height:32px;
+}
+.visitor-msg, .visitor-email,.visitor-send-btn{
+    margin-top: 10px;
+}
+
+.visitor-name, .visitor-msg, .visitor-email,.visitor-send-btn{
+    margin-bottom: 10px;
+    border-radius: 0px;
+    background-color: white;
+}
+
+.visitor-send-btn{
+    background-color: #2196F3;
+}
+.details-submission-form{
+    margin: 10px;
+}
+
+.copyright-info{
+    padding-top: 8px;
+    margin-bottom: 18px;
+    padding-right: 8px;
+    background-color: floralwhite;
+    font-size: 12px;
+}
+
+.copyright-info p, .glyphicon-copyright-mark{
+    color:#000000;
+}
+.copyright-heart-icon{
+    color: red;
+    animation-name:rotate-360-repeated;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes rotate-360-repeated {
+    50%{transform:scale(1.1,1.1);}
+    100%{transform:scale(1.2,1.2);}
+}
+/*CONTACT PAGE SECTION END*/
 
 /*ADMIN PAGE*/
 /*.navbar-header{*/
