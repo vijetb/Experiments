@@ -15,7 +15,6 @@
 
 
         $routeProvider
-
             .when("/experiment", {
                 templateUrl: "Experiment.html"
             })
