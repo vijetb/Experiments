@@ -156,24 +156,7 @@ body{
     #testList li {
         font-size: 25px;
     }
-    /*CONTACT ME PAGE*/
-    /*.vijet-image{*/
-        /*width: 165px !important;*/
-        /*height: 165px !important;*/
-    /*}*/
 
-    /*.contact_me_dialogue{*/
-        /*font-size: 22px !important;*/
-    /*}*/
-
-    /*.copyright-info{*/
-        /*font-size: 14px !important;*/
-    /*}*/
-    /*.contact-me-address-table{*/
-        /*max-width: 250px !important;*/
-        /*display: inline-table !important;*/
-        /*margin-top: 15px !important;*/
-    /*}*/
     /*CONTACT ME PAGE*/
     .vijet-image{
         width: 165px !important;
@@ -207,6 +190,7 @@ body{
     }
     .social-network{
         width: 300px !important;
+        text-align: left !important;
     }
 
 
@@ -329,6 +313,7 @@ body{
 
     .social-network{
         width: 400px !important;
+        text-align: left !important;
     }
 
 
@@ -337,13 +322,18 @@ body{
 .loginContainer{
     max-width: 400px;
 }
+.section-heading{
+    font-family: 'Risque', cursive;
+    padding: 12px;
+    font-size: 24px;
+}
 
 
 
 /*CONTACT PAGE SECTION*/
-.section-heading{
-    font-family: 'Risque', cursive;
-    padding: 12px;
+.vijet-image{
+    width: 165px;
+    height: 165px;
 }
 
 .contact_address_row{
@@ -361,17 +351,23 @@ body{
 }
 .contact-me-address-table{
     max-width: 200px;
-    /*margin-top: 25px;*/
     display:table;
     margin:auto;
 }
 
+.connect-me-label{
+    text-align: center;
+}
+
 .social-network{
-    /*text-align: center;*/
+    text-align: center;
 }
 .social-media-icon{
     width: 32px;
     height:32px;
+}
+.details-submission-form{
+    margin-top: 25px;
 }
 .visitor-msg, .visitor-email,.visitor-send-btn{
     margin-top: 10px;
