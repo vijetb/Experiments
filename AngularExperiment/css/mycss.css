@@ -11,7 +11,6 @@ body{
     background-image: url("../images/bg.jpg");
     padding-top: 32px !important;
     color: #c3c3c4;
-
 }
 
 
@@ -226,28 +225,37 @@ body{
         height: 200px !important;
     }
 
-    .contact_address_row{
-        display:none;
-        margin:0;
-    }
-
-    .contact-me-address-table{
-        max-width: 250px !important;
-        display: inline-table !important;
-        margin-top: 15px !important;
-    }
-
-    .social-media-icon{
-        width: 48px !important;
-        height:48px !important;
-    }
-
     .copyright-info{
         font-size: 14px !important;
     }
 
     .contact_me_dialogue{
-        font-size: 32px !important;
+        font-size: 24px !important;
+    }
+
+    .contact-me-address-table{
+        font-size: 14px !important;
+        max-width: 300px !important;
+        display: inline-table !important;
+        margin-top: 25px !important;
+    }
+
+    .details-submission-form{
+        margin-top: 25px !important;
+        font-size: 14px !important;
+    }
+    .social-media-icon{
+        width: 40px !important;
+        height:40px !important;
+    }
+    .connect-me-label{
+        text-align: center !important;
+        max-width: 300px !important;
+        font-size: 20px !important;
+    }
+    .social-network{
+        width: 300px !important;
+        text-align: left !important;
     }
 
 }
@@ -307,8 +315,13 @@ body{
         margin-top: 25px !important;
     }
 
-    #section7{
-        margin-top: 35px !important;
+    /*#section7{*/
+        /*margin-top: 15px !important;*/
+    /*}*/
+
+    .social-media-icon{
+        width: 48px !important;
+        height:48px !important;
     }
 
     .social-network{
@@ -366,6 +379,8 @@ body{
     width: 32px;
     height:32px;
 }
+
+
 .details-submission-form{
     margin-top: 25px;
 }
