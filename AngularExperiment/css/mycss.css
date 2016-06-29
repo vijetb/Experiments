@@ -137,6 +137,11 @@ body{
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    /*ALL*/
+    .section-heading{
+        font-size: 32px !important;
+    }
+
     .vijet-desc strong{
         font-size: 35px;
     }
@@ -152,17 +157,68 @@ body{
         font-size: 25px;
     }
     /*CONTACT ME PAGE*/
-    .contact_me_dialogue{
-        font-size: 22px !important;
+    /*.vijet-image{*/
+        /*width: 165px !important;*/
+        /*height: 165px !important;*/
+    /*}*/
+
+    /*.contact_me_dialogue{*/
+        /*font-size: 22px !important;*/
+    /*}*/
+
+    /*.copyright-info{*/
+        /*font-size: 14px !important;*/
+    /*}*/
+    /*.contact-me-address-table{*/
+        /*max-width: 250px !important;*/
+        /*display: inline-table !important;*/
+        /*margin-top: 15px !important;*/
+    /*}*/
+    /*CONTACT ME PAGE*/
+    .vijet-image{
+        width: 165px !important;
+        height: 165px !important;
     }
 
     .copyright-info{
         font-size: 14px !important;
     }
+
+    .contact_me_dialogue{
+        font-size: 24px !important;
+    }
+
+    .contact-me-address-table{
+        font-size: 14px !important;
+        max-width: 300px !important;
+        display: inline-table !important;
+        margin-top: 25px !important;
+    }
+
+    .details-submission-form{
+        margin-top: 25px !important;
+        font-size: 14px !important;
+    }
+
+    .connect-me-label{
+        text-align: center !important;
+        max-width: 300px !important;
+        font-size: 20px !important;
+    }
+    .social-network{
+        width: 300px !important;
+    }
+
+
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    /*ALL*/
+    .section-heading{
+        font-size: 36px !important;
+    }
+
     .vijet-desc strong{
         font-size: 45px;
     }
@@ -179,19 +235,27 @@ body{
     }
 
     /*CONTACT ME PAGE*/
+
+
+    .vijet-image{
+        width: 200px !important;
+        height: 200px !important;
+    }
+
     .contact_address_row{
         display:none;
         margin:0;
     }
 
     .contact-me-address-table{
-        max-width: 300px;
-        margin: 0;
+        max-width: 250px !important;
+        display: inline-table !important;
+        margin-top: 15px !important;
     }
 
     .social-media-icon{
-        width: 48px;
-        height:48px;
+        width: 48px !important;
+        height:48px !important;
     }
 
     .copyright-info{
@@ -199,12 +263,18 @@ body{
     }
 
     .contact_me_dialogue{
-        font-size: 24px !important;
+        font-size: 32px !important;
     }
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
+    .section-heading{
+        font-size: 48px !important;
+    }
+
     .vijet-desc strong{
         font-size: 45px;
     }
@@ -222,13 +292,46 @@ body{
     }
 
     /*CONTACT ME PAGE*/
+    .vijet-image{
+        width: 200px !important;
+        height: 200px !important;
+        margin-left: 25px;
+    }
+
     .copyright-info{
         font-size: 14px !important;
     }
 
     .contact_me_dialogue{
-        font-size: 24px !important;
+        font-size: 32px !important;
     }
+
+    .contact-me-address-table{
+        font-size: 18px !important;
+        max-width: 350px !important;
+        display: inline-table !important;
+        margin-top: 25px !important;
+    }
+
+    .connect-me-label{
+        text-align: center !important;
+        max-width: 350px !important;
+        font-size: 20px !important;
+    }
+
+    .details-submission-form{
+        margin-top: 25px !important;
+    }
+
+    #section7{
+        margin-top: 35px !important;
+    }
+
+    .social-network{
+        width: 400px !important;
+    }
+
+
 }
 
 .loginContainer{
@@ -257,11 +360,14 @@ body{
     color: #2196F3;
 }
 .contact-me-address-table{
-    max-width: 250px;
-    margin: 0 auto;
+    max-width: 200px;
+    /*margin-top: 25px;*/
+    display:table;
+    margin:auto;
 }
+
 .social-network{
-    text-align: center;
+    /*text-align: center;*/
 }
 .social-media-icon{
     width: 32px;
@@ -280,9 +386,7 @@ body{
 .visitor-send-btn{
     background-color: #2196F3;
 }
-.details-submission-form{
-    margin: 10px;
-}
+
 
 .copyright-info{
     padding-top: 8px;
