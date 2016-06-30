@@ -128,6 +128,41 @@ body{
 .edu-trophy{
     color:#FFFF8D;
 }
+
+/*SKILLSPAGE*/
+.skills_header{
+    font-family: 'Satisfy', cursive;
+    font-size: 15px;
+    margin:0px;
+    padding:8px;
+    color: #FFCCBC;
+}
+
+.header-without-top-margin{
+  padding:0px;
+  margin:0px;
+  margin-bottom:10px;
+}
+
+.certification-link{
+    color: #FF5252;
+}
+
+.certification-brand{
+    width:156px;
+    height:64px;
+    padding: 10px;
+}
+
+.certifications-table td{
+    font-size: 16px;
+}
+
+.certifications-table td p{
+    font-size: 18px;
+    color: #1DE9B6;
+    margin-bottom: 0px;
+}
 /*SMALL SCREEN*/
 
 .coll-details h2 span{
@@ -288,7 +323,11 @@ body{
         font-size: 16px !important;
     }
     /*EDUCATION PAGE END*/
-
+    /*skills PAGE*/
+    .skills_header{
+        font-size: 18px !important;
+    }
+    /*skills page end*/
     /*CONTACT ME PAGE*/
     .vijet-image{
         width: 165px !important;
@@ -384,7 +423,11 @@ body{
         font-size: 16px !important;
     }
     /*EDUCATION PAGE END*/
-
+    /*skills PAGE*/
+    .skills_header{
+        font-size: 18px !important;
+    }
+    /*skills page end*/
     /*CONTACT ME PAGE*/
 
 
@@ -489,7 +532,11 @@ body{
     }
     /*EDUCATION PAGE END*/
 
-
+    /*skills PAGE*/
+    .skills_header{
+        font-size: 18px !important;
+    }
+    /*skills page end*/
     /*CONTACT ME PAGE*/
     .vijet-image{
         width: 200px !important;
