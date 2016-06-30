@@ -121,15 +121,23 @@ body{
     color:#42A5F5;
 }
 
-/*SMALL SCREEN*/
-.collage-name{
-    font-size: 18px;
+.bvb-logo{
+    background-color: #ffffff;
+    padding:15px;
 }
+
+/*SMALL SCREEN*/
+
 .coll-details h2 span{
     margin-bottom: 0px;
     margin-top: 0px;
     padding:0px;
     font-size: 18px;
+}
+.coll-details h5{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding:0px;
 }
 
 .coll-details h2{
@@ -245,6 +253,11 @@ body{
     }
     /*EDUCATION PAGE*/
 
+    .coll-details h5{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+    }
     .coll-details h2 span{
         margin-bottom: 0px;
         margin-top: 0px;
@@ -342,6 +355,11 @@ body{
         padding:0px;
         font-size: 30px !important;
     }
+    .coll-details h5{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+    }
 
     .coll-details h2{
         margin:0px;
@@ -435,10 +453,16 @@ body{
     /*EDUCATION PAGE*/
 
     .coll-details h2 span{
+         margin-bottom: 0px;
+         margin-top: 0px;
+         padding:0px;
+         font-size: 30px !important;
+     }
+
+    .coll-details h5{
         margin-bottom: 0px;
         margin-top: 0px;
         padding:0px;
-        font-size: 30px !important;
     }
 
     .coll-details h2{
