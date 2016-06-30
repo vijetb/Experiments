@@ -96,7 +96,95 @@ body{
     position: relative;
 }
 
+#my-text-container{
+    position: relative;
+}
 
+/*EDUCATION PAGE*/
+.education_courses{
+    list-style-type: square;
+}
+
+.education_courses li{
+    color: red;
+}
+
+.education_courses li span{
+    color: #c3c3c4;
+}
+
+.collage-name{
+    color: #1DE9B6;
+}
+
+.edu-icons{
+    color:#42A5F5;
+}
+
+/*SMALL SCREEN*/
+.collage-name{
+    font-size: 18px;
+}
+.coll-details h2 span{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding:0px;
+    font-size: 18px;
+}
+
+.coll-details h2{
+    margin:0px;
+    padding:0px;
+}
+
+.coll-details h4{
+    line-height: 1em !important;
+    padding: 1px !important;
+    margin: 0px;
+    font-size: 14px;
+}
+
+.education_courses li span{
+    font-size: 12px;
+}
+
+/*.coll-details h4 span{*/
+    /*line-height: 1em !important;*/
+/*}*/
+
+/*.coll-details h2{*/
+    /*margin-bottom: 0px;*/
+    /*margin-top: 0px;*/
+    /*padding:0px;*/
+/*}*/
+/*.collage-name{*/
+    /*margin-bottom: 0px;*/
+    /*margin-top: 0px;*/
+    /*padding:0px;*/
+    /*font-size: 18px;*/
+/*}*/
+/*.coll-details h4{*/
+    /*margin: 1px;*/
+/*}*/
+
+/*.coll-details h4 span{*/
+    /*line-height:0.5em !important;*/
+/*}*/
+
+/*.education-coll-logo{*/
+    /*width :125px;*/
+    /*height :125px;*/
+/*}*/
+
+/*.education_courses li span{*/
+    /*font-size: 12px;*/
+/*}*/
+
+/*.coll-details h4 span, .coll-details-duration{*/
+    /*font-size: 14px;*/
+/*}*/
+
+/*EDUCATION PAGE END*/
 @media (max-width:992px){
     .navbar-header {
         float: none;
@@ -155,6 +243,36 @@ body{
     #testList li {
         font-size: 25px;
     }
+    /*EDUCATION PAGE*/
+
+    .coll-details h2 span{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+        font-size: 30px !important;
+    }
+
+    .coll-details h2{
+        margin:0px;
+        padding:0px;
+    }
+
+    .coll-details h4{
+        line-height: 1.5em !important;
+        padding: 1px !important;
+        margin: 0px !important;
+        font-size: 18px !important;
+    }
+
+    .education-coll-logo{
+        width :175px !important;
+        height :175px !important;
+    }
+
+    .education_courses li span{
+        font-size: 16px !important;
+    }
+    /*EDUCATION PAGE END*/
 
     /*CONTACT ME PAGE*/
     .vijet-image{
@@ -216,6 +334,36 @@ body{
     .vijet-desc-content {
         font-size: 34px;
     }
+
+    /*EDUCATION PAGE*/
+    .coll-details h2 span{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+        font-size: 30px !important;
+    }
+
+    .coll-details h2{
+        margin:0px;
+        padding:0px;
+    }
+
+    .coll-details h4{
+        line-height: 1.5em !important;
+        padding: 1px !important;
+        margin: 0px !important;
+        font-size: 18px !important;
+    }
+
+    .education-coll-logo{
+        width :175px !important;
+        height :175px !important;
+    }
+
+    .education_courses li span{
+        font-size: 16px !important;
+    }
+    /*EDUCATION PAGE END*/
 
     /*CONTACT ME PAGE*/
 
@@ -282,6 +430,39 @@ body{
     .vijet-desc-content {
         font-size: 35px;
     }
+
+
+    /*EDUCATION PAGE*/
+
+    .coll-details h2 span{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+        font-size: 30px !important;
+    }
+
+    .coll-details h2{
+        margin:0px;
+        padding:0px;
+    }
+
+    .coll-details h4{
+        line-height: 1.5em !important;
+        padding: 1px !important;
+        margin: 0px !important;
+        font-size: 18px !important;
+    }
+
+    .education-coll-logo{
+        width :175px !important;
+        height :175px !important;
+    }
+
+    .education_courses li span{
+        font-size: 16px !important;
+    }
+    /*EDUCATION PAGE END*/
+
 
     /*CONTACT ME PAGE*/
     .vijet-image{

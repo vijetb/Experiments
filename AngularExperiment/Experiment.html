@@ -3,44 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    <script src="js/ng-img-crop.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/ng-img-crop.css">
     <style>
-        .cropArea {
-            background: #E4E4E4;
-            overflow: hidden;
-            width:500px;
-            height:350px;
+        .coll-details h4{
+            line-height: 1em !important;
+            padding: 2px;
+            margin: 0px;
+            font-size: 16px;
         }
     </style>
-    <script>
-        angular.module('app', ['ngImgCrop'])
-                .controller('Ctrl', function($scope) {
-                    $scope.myImage='';
-                    $scope.myCroppedImage='';
-
-                    var handleFileSelect=function(evt) {
-                        var file=evt.currentTarget.files[0];
-                        var reader = new FileReader();
-                        reader.onload = function (evt) {
-                            $scope.$apply(function($scope){
-                                $scope.myImage=evt.target.result;
-                            });
-                        };
-                        reader.readAsDataURL(file);
-                    };
-                    angular.element(document.querySelector('#fileInput')).on('change',handleFileSelect);
-                });
-    </script>
 </head>
-<body ng-app="app" ng-controller="Ctrl">
-<div>Select an image file: <input type="file" id="fileInput" /></div>
-<div class="cropArea">
-    <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
+<body>
+<div class="coll-details neu-details col-sm-8 col-md-8 col-lg-8">
+    <h2><span class="collage-name">Northeastern University</span></h2>
+    <h4><span>Candidate for Master of Science in Computer Science</span></h4>
+    <h4><span>College of Computer and Information Science</span></h4>
+    <h4><span>Boston, Massachusetts, US</span></h4>
+    <h4 class="coll-details-duration"><span class="glyphicon glyphicon-calendar edu-icons"></span> Sept. 2015 - present | <span class="glyphicon glyphicon-education edu-icons"></span> Expected Graduation - Dec. 2017</h4>
+    <h4 class="coll-details-duration"><a  data-toggle="collapse" data-target="#neuCourses"> Course list</a></h4>
+    <div id="neuCourses" class="collapse">
+        <ul class="education_courses">
+            <li><span>Programming Design Paradaigm (CS 5010)</span></li>
+            <li><span>Introduction to Databaase Management Systems (CS 5200)</span></li>
+            <li><span>Algorithms (CS 5800)</span></li>
+            <li><span>Managing Software Developement (CS 5500)</span></li>
+            <li><span>Information Retrieval (CS 5600)</span></li>
+        </ul>
+    </div>
 </div>
-<div>Cropped Image:</div>
-<div><img ng-src="{{myCroppedImage}}" /></div>
 </body>
 </html>

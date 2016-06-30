@@ -22,7 +22,10 @@ $(document).ready(function () {
         menu: '#menu',
         onLeave: animateSections,
         scrollOverflow:true,
-        autoScrolling:false,
+        css3: true,
+        normalScrollElements: '.my-text-container',
+
+        autoScrolling:true,
         verticalCentered:false,
         css3:true,
         scrollingSpeed: 1000
