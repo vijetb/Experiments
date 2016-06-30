@@ -144,6 +144,14 @@ body{
   margin-bottom:10px;
 }
 
+.skills-table tr td{
+    border: none !important;
+}
+
+.skill-label{
+    color:#FF9E80;
+}
+
 .certification-link{
     color: #FF5252;
 }
