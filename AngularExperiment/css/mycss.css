@@ -515,6 +515,14 @@ body{
         text-align: left !important;
     }
 
+    /*PROJECT DESC PAGE*/
+    .project-heading{
+        font-size: 32px !important;
+    }
+
+    .proj-desc-table tr td, .proj-desc-table tr td p {
+        font-size: 16px !important;
+    }
 
 }
 
@@ -638,6 +646,15 @@ body{
     .social-network{
         width: 300px !important;
         text-align: left !important;
+    }
+
+    /*PROJECT DESC PAGE*/
+    .project-heading{
+        font-size: 32px !important;
+    }
+
+    .proj-desc-table tr td, .proj-desc-table tr td p {
+        font-size: 16px !important;
     }
 
 }
@@ -770,6 +787,14 @@ body{
         text-align: left !important;
     }
 
+    /*PROJECT DESC PAGE*/
+    .project-heading{
+        font-size: 32px !important;
+    }
+
+    .proj-desc-table tr td, .proj-desc-table tr td p {
+        font-size: 16px !important;
+    }
 
 }
 
@@ -975,3 +1000,30 @@ color:#1DE9B6;
 .uploadImageSection{
     top: 125px;
 }/*FRIEND PAGE PROFILE END*/
+
+
+/*PROJECT DESC PAGE*/
+.project-heading{
+    font-size: 20px;
+    padding:10px;
+    color: #1DE9B6;
+}
+
+.table-heading{
+    color:#0091EA;
+}
+.proj-desc-contribution{
+    color: #F48FB1;
+}
+
+.project-desc-artifact-links{
+    color:#FF8A65;
+}
+.proj-desc-table tr td{
+    border: none !important;
+}
+
+/*.projects-menu-heading{*/
+    /*margin-left: 3px;*/
+/*}*/
+/*PROJECT DESC PAGE END*/
