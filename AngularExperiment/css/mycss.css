@@ -336,7 +336,7 @@ body{
 }
 
 .project-front h3, .project-front h5, .project-back h3, .project-back p{
-    color: #000000 !important;
+    color: #000000;
 }
 
 .project {
@@ -351,6 +351,41 @@ body{
 
 /*project page end*/
 /*PROJECT PAGE END*/
+/*EXPERIENCE PAGE*/
+.exp-header{
+    font-size: 16px;
+    color:#1DE9B6;
+}
+
+.exp{
+    margin-bottom: 10px;
+}
+
+.exp-role,.exp-role,.exp-duration,.exp-desc{
+    font-size: 13px;
+}
+
+.exp-desc-list li span{
+    font-size: 13px;
+}
+
+.exp h1, .exp h2, .exp h3, .exp h4, .exp h5, .exp h6{
+    padding: 1px;
+    margin: 0px;
+}
+.exp-desc-list{
+    list-style-type: square;
+}
+
+.exp-desc-list li{
+    color: red;
+}
+
+.exp-desc-list li span{
+    color: #c3c3c4;
+}
+
+/*EXPERIENCE PAGE END*/
 @media (max-width:992px){
     .navbar-header {
         float: none;
@@ -477,7 +512,43 @@ body{
 
 
     /*project page end*/
+    /*EXPERIENCE PAGE*/
+    .exp-header{
+        font-size: 22px !important;
+    }
 
+
+    .exp-role {
+        font-size: 16px !important;
+    }
+    /*.exp-role {*/
+        /*font-size: 16px !important;*/
+    /*} */
+    /*.exp-duration {*/
+              /*font-size: 16px !important;*/
+    /*}*/
+    /*.exp-desc{*/
+        /*font-size: 16px !important;*/
+    /*}*/
+
+
+
+    /*.exp-desc-list li span{*/
+        /*font-size: 16px !important;*/
+    /*}*/
+
+    .exp-neu-logo{
+        width:96px !important;
+        height:96px!important;
+        padding: 5px!important;
+    }
+
+    .exp-bosch-logo{
+        margin-top: 15px !important;
+        width:150px !important;
+    }
+
+    /*EXPERIENCE PAGE END*/
 
     /*CONTACT ME PAGE*/
     .vijet-image{
@@ -606,7 +677,48 @@ body{
 
     /*project page end*/
 
+    /*EXPERIENCE PAGE*/
 
+    /*.exp-header{*/
+        /*font-size: 26px !important;*/
+        /*color:#1DE9B6;*/
+    /*}*/
+    .exp-header{
+        font-size: 26px !important;
+    }
+
+    /*.exp-role,.exp-role,.exp-duration,.exp-desc{*/
+        /*font-size: 18px !important;*/
+    /*}*/
+
+    /*.exp-desc-list li span{*/
+        /*font-size: 18px !important;*/
+    /*}*/
+
+    /*.exp-header{*/
+        /*font-size: 26px !important;*/
+    /*}*/
+
+    /*.exp-role,.exp-role,.exp-duration,.exp-desc{*/
+        /*font-size: 16px !important;*/
+    /*}*/
+
+    .exp-desc-list li span{
+        font-size: 16px !important;
+    }
+
+    .exp-neu-logo{
+        width:96px;
+        height:96px;
+        padding: 5px;
+    }
+
+    .exp-bosch-logo{
+        margin-top: 15px;
+        width:150px;
+    }
+
+    /*EXPERIENCE PAGE END*/
     /*CONTACT ME PAGE*/
 
 
@@ -740,6 +852,34 @@ body{
         font-size: 24px !important;
     }
     /*project page end*/
+
+    /*EXPERIENCE PAGE*/
+
+    .exp-header{
+        font-size: 26px !important;
+    }
+
+    .exp-role,.exp-role,.exp-duration,.exp-desc{
+        font-size: 16px !important;
+    }
+
+    .exp-desc-list li span{
+            font-size: 16px !important;
+    }
+
+
+    .exp-neu-logo{
+        width:96px;
+        height:96px;
+        padding: 5px;
+    }
+
+    .exp-bosch-logo{
+        margin-top: 15px;
+        width:150px;
+    }
+
+    /*EXPERIENCE PAGE END*/
 
     /*CONTACT ME PAGE*/
     .vijet-image{
