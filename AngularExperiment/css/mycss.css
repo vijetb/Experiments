@@ -100,6 +100,22 @@ body{
     position: relative;
 }
 
+/*ABOUT-ME PAGE*/
+.abt-me-vijet-image{
+    height: 450px;
+    width: 320px;
+}
+.about_me_content{
+    text-align: justify;
+}
+
+.about-me-page-text-content{
+    margin:5px;
+    font-size: 16px;
+}
+
+
+/*ABOUT-ME PAGE END*/
 /*EDUCATION PAGE*/
 .education_courses{
     list-style-type: square;
@@ -108,6 +124,7 @@ body{
 .education_courses li{
     color: red;
 }
+
 
 .education_courses li span{
     color: #c3c3c4;
@@ -444,6 +461,36 @@ body{
     #testList li {
         font-size: 25px;
     }
+
+    /*ABOUT-ME PAGE*/
+
+    .abt-me-vijet-image{
+        margin-right: 15px;
+    }
+    .my-image-section{
+        float: left;
+    }
+
+    .my-family-section{
+        float: right;
+    }
+
+    .my-granny-section{
+        float: left;
+    }
+
+    .about_me_content{
+        text-align: justify;
+    }
+
+    .about-me-page-text-content{
+        margin:0px;
+        font-size: 16px;
+    }
+
+
+    /*ABOUT-ME PAGE END*/
+
     /*EDUCATION PAGE*/
 
     .coll-details h5{
@@ -618,6 +665,34 @@ body{
     .vijet-desc-content {
         font-size: 34px;
     }
+    /*ABOUT-ME PAGE*/
+
+    .abt-me-vijet-image{
+        margin-right: 15px;
+    }
+    .my-image-section{
+        float: left;
+    }
+
+    .my-family-section{
+        float: right;
+    }
+
+    .my-granny-section{
+        float: left;
+    }
+
+    .about_me_content{
+        text-align: justify;
+    }
+
+    .about-me-page-text-content{
+        margin:0px;
+        font-size: 16px;
+    }
+
+
+    /*ABOUT-ME PAGE END*/
 
     /*EDUCATION PAGE*/
     .coll-details h2 span{
@@ -794,6 +869,34 @@ body{
         font-size: 35px;
     }
 
+    /*ABOUT-ME PAGE*/
+
+    .abt-me-vijet-image{
+        margin-right: 15px;
+    }
+    .my-image-section{
+        float: left;
+    }
+
+    .my-family-section{
+        float: right;
+    }
+
+    .my-granny-section{
+        float: left;
+    }
+
+    .about_me_content{
+        text-align: justify;
+    }
+
+    .about-me-page-text-content{
+        margin:0px;
+        font-size: 18px;
+    }
+
+
+    /*ABOUT-ME PAGE END*/
 
     /*EDUCATION PAGE*/
 
