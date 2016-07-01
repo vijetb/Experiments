@@ -238,6 +238,119 @@ body{
 /*}*/
 
 /*EDUCATION PAGE END*/
+
+/*PROJECT PAGE*/
+
+.project {
+    width: 350px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    background-color: aqua;
+    margin-top:10px;
+}
+
+.project .project-back {
+    background-color:#F5F5F5;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 0;
+    transition: opacity .5s;
+}
+
+.project:hover .project-back {
+    opacity: 1;
+    transition: opacity .5s;
+}
+.project-back h3{
+    display: block;
+    text-align: center;
+    line-height: 50px!important;
+    position: relative;
+}
+.project-back p{
+    text-align: center;
+}
+
+.project-front h3, .project-front h5{
+    margin:0;
+    padding:5px;
+}
+
+/*PROJECT COLORS*/
+
+.wham-project{
+    background-color: #64FFDA;
+}
+
+.hushvault-project{
+    background-color: #FFCCBC;
+}
+
+.t2t-project{
+    background-color: #FFCC80;
+}
+
+.converter-project{
+    background-color: #E1BEE7;
+}
+
+.hangman-project{
+    background-color:#81D4FA;
+}
+
+.fna-project{
+    background-color:#B2EBF2;
+}
+
+.view-color-pal-project{
+    background-color:#A5D6A7;
+
+}
+
+.doc-generator-project{
+    background-color:#FFF59D;
+
+}
+
+.website-project{
+    background-color:#D7CCC8;
+}
+
+.osgi-project{
+    background-color:#FFECB3;
+}
+
+.ir-project{
+    background-color: #CFD8DC;
+}
+
+/*SMALL SCREEN*/
+/*project page*/
+.projects{
+    text-align: center;
+}
+
+.project-front h3, .project-front h5, .project-back h3, .project-back p{
+    color: #000000 !important;
+}
+
+.project {
+    width: 220px !important;
+    height: 75px !important;
+    text-align: left !important;
+}
+
+.project h3{
+    font-size: 14px !important;
+}
+
+/*project page end*/
+/*PROJECT PAGE END*/
 @media (max-width:992px){
     .navbar-header {
         float: none;
@@ -336,6 +449,36 @@ body{
         font-size: 18px !important;
     }
     /*skills page end*/
+    /*project page*/
+
+    .project {
+        width: 275px !important;
+        height: 100px !important;
+    }
+
+    .project h3{
+        font-size: 20px !important;
+    }
+
+    /*project page end*/
+    /*project page*/
+    .projects{
+        text-align: left;
+    }
+
+    .project {
+        width: 225px !important;
+        height: 100px !important;
+    }
+
+    .project h3{
+        font-size: 18px !important;
+    }
+
+
+    /*project page end*/
+
+
     /*CONTACT ME PAGE*/
     .vijet-image{
         width: 165px !important;
@@ -436,6 +579,26 @@ body{
         font-size: 18px !important;
     }
     /*skills page end*/
+
+    /*project page*/
+
+    .projects{
+        text-align: left;
+    }
+
+    .project {
+        width: 275px !important;
+        height: 100px !important;
+    }
+
+    .project h3{
+        font-size: 20px !important;
+    }
+
+
+    /*project page end*/
+
+
     /*CONTACT ME PAGE*/
 
 
@@ -545,6 +708,22 @@ body{
         font-size: 18px !important;
     }
     /*skills page end*/
+
+    /*project page*/
+    .projects{
+        text-align: left;
+    }
+
+    .project {
+        width: 350px !important;
+        height: 100px !important;
+    }
+
+    .project h3{
+        font-size: 24px !important;
+    }
+    /*project page end*/
+
     /*CONTACT ME PAGE*/
     .vijet-image{
         width: 200px !important;
