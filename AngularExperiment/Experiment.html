@@ -3,16 +3,65 @@
 
     <meta charset="utf-8">
     <title>How to Create a CSS Overlay</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <style>
+        div.horizontal {
+            display: flex;
+            justify-content: center;
+        }
+        div.horizontal-1{
+            background-color: #5bc0de;
+            width:50%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+        div.horizontal-2{
+            background-color: #A5D6A7;
+            width:50%;
+            height:100%;
+
+        }
+
+        #vertical {
+            /*width:100%;*/
+            /*height:100%;*/
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*justify-content: center;*/
+            /*margin-left: 50%;*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            margin-top: -250px; /* Half the height */
+            margin-left: -250px; /* Half the width */
+        }
+
+        div.div1 {
+            background-color: #cff;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 
 </head>
 <body>
+<div class="horizontal div1">
+    <div class="horizontal-1">
 
-<div id="outer-box">
-    <img src="cartagena.jpg">
-    <div id="inner-box">
-        <p>This is the overlay!</p>
+    <div id="vertical">
+        <img src="images/home_image.jpg"/>
     </div>
+    </div>
+    <div class="horizontal-2">
+        <img src="images/home_image.jpg"/>
+    <!--<div class="vertical">-->
+        <!---->
+    <!--</div>-->
+        </div>
 </div>
 
 </body>

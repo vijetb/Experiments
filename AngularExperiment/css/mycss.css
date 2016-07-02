@@ -1,4 +1,8 @@
 /*COMMON ELEMENTS*/
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 * {
     font-size: 1em;
@@ -9,10 +13,32 @@
 
 body{
     background-image: url("../images/bg.jpg");
-    padding-top: 32px !important;
+    /*padding-top: 32px !important;*/
+    /*padding-bottom: 32px !important;*/
     color: #c3c3c4;
 }
 
+.section{
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+}
+
+div.row.footer-copyright{
+    background-color: #FFF59D;
+}
+
+#homeImage{
+    width:320px;
+    height:500px;
+    padding: 15px;
+}
+
+.home-page-desc{
+    padding:15px;
+}
+.home-img-text-section{
+    margin-top: 10%;
+}
 
 .vijet-desc strong{
     color: #ffffff;
@@ -20,6 +46,10 @@ body{
     margin-bottom: 0;
 }
 
+.cont{
+    display: flex;
+    align-items: center;
+}
 .vijet-desc-content{
     display: inline;
     display:inline;
@@ -40,8 +70,6 @@ body{
 }
 
 #testList li{
-
-    /*font-size: 35px;*/
     color: #1DE9B6;
     font-family: 'Risque', cursive;
 }
@@ -217,42 +245,6 @@ body{
 .education_courses li span{
     font-size: 12px;
 }
-
-/*.coll-details h4 span{*/
-    /*line-height: 1em !important;*/
-/*}*/
-
-/*.coll-details h2{*/
-    /*margin-bottom: 0px;*/
-    /*margin-top: 0px;*/
-    /*padding:0px;*/
-/*}*/
-/*.collage-name{*/
-    /*margin-bottom: 0px;*/
-    /*margin-top: 0px;*/
-    /*padding:0px;*/
-    /*font-size: 18px;*/
-/*}*/
-/*.coll-details h4{*/
-    /*margin: 1px;*/
-/*}*/
-
-/*.coll-details h4 span{*/
-    /*line-height:0.5em !important;*/
-/*}*/
-
-/*.education-coll-logo{*/
-    /*width :125px;*/
-    /*height :125px;*/
-/*}*/
-
-/*.education_courses li span{*/
-    /*font-size: 12px;*/
-/*}*/
-
-/*.coll-details h4 span, .coll-details-duration{*/
-    /*font-size: 14px;*/
-/*}*/
 
 /*EDUCATION PAGE END*/
 
@@ -848,6 +840,8 @@ body{
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
+
 
     .section-heading{
         font-size: 48px !important;

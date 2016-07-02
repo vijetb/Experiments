@@ -17,14 +17,13 @@ $(document).ready(function () {
     });
 
     $('#fullpage').fullpage({
-        // sectionsColor: ['#ff0000', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        sectionsColor: ['#ff0000', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
         anchors: ['homePage', 'aboutMePage', 'educationPage', 'skillsPage','projectPage', 'expPage','friendsPage','contactMePage'],
         menu: '#menu',
         onLeave: animateSections,
         scrollOverflow:true,
         css3: true,
         normalScrollElements: '.my-text-container',
-
         autoScrolling:true,
         verticalCentered:false,
         css3:true,
@@ -37,8 +36,12 @@ $(document).ready(function () {
         }
     }
 
-    var height = $("#myimage").height()/2;
-    $(".vijet-desc").css({'margin-top':height});
-    
+    // var $img = $('#homeImage');
+    // var h = $img.height();
+    // $img.css('margin-top', + h / -2 + "px !important");
+    // var height = $("#homeImage").height()/2;
+    // $(".vijet-desc").css({'margin-top':height});
+    // var width = $(document).height()/2;
+
     
 });
