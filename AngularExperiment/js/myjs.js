@@ -17,7 +17,7 @@ $(document).ready(function () {
     });
 
     $('#fullpage').fullpage({
-        sectionsColor: ['#ff0000', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        // sectionsColor: ['#ff0000', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
         anchors: ['homePage', 'aboutMePage', 'educationPage', 'skillsPage','projectPage', 'expPage','friendsPage','contactMePage'],
         menu: '#menu',
         onLeave: animateSections,
