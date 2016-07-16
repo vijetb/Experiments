@@ -1,0 +1,39 @@
+* {
+    font-size: 1em;
+    font-family: "Titillium Web", sans-serif;
+    color: #c3c3c4;
+    line-height: 1.25em !important;
+}
+
+body{
+    position: relative;
+    background-image: url(../images/bg.jpg);
+    padding-top: 32px;
+}
+
+/*PROJECT DESC PAGE*/
+.project-heading{
+    font-size: 20px;
+    padding:10px;
+    color: #1DE9B6;
+}
+
+.table-heading{
+    color:#0091EA;
+}
+.proj-desc-contribution{
+    color: #F48FB1;
+}
+
+.project-desc-artifact-links{
+    color:#FF8A65;
+}
+.proj-desc-table tr td{
+    border: none !important;
+}
+
+.edu-trophy{
+    color:#FFFF8D;
+}
+
+/*PROJECT DESC PAGE END*/

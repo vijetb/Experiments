@@ -1,0 +1,941 @@
+* {
+    font-size: 1em;
+    font-family: "Titillium Web", sans-serif;
+    color: #c3c3c4;
+    line-height: 1.25em !important;
+}
+
+body{
+    position: relative;
+    background-image: url(../images/bg.jpg);
+}
+/*Add right margin to the right most item*/
+#mynavbar{
+    padding-right: 15px;
+}
+
+section h2 a{
+    padding-top: 48px !important;
+}
+
+/*QUOTES SECTION*/
+.quote-section{
+    padding: 20px;
+    width: 100%;
+    background-color: #F5F5F5;
+    margin: 0px;
+
+}
+
+.fav-quote {
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 28px;
+    color: #8A360F;
+}
+/*QUOTES SECTION END*/
+
+.section-heading{
+    font-family: 'Risque', cursive;
+    font-size: 24px;
+}
+
+.section-heading{
+    color: #64FFDA;
+    text-decoration: none !important;
+}
+.section-heading:visited,.section-heading:hover,.section-heading:active{
+    color: #64FFDA;
+    text-decoration: none !important;
+}
+
+/*ABOUT-ME PAGE*/
+.abt-me-vijet-image{
+    height: 450px;
+    width: 320px;
+}
+.about_me_content{
+    text-align: justify;
+}
+
+.about-me-page-text-content{
+    margin:8px;
+    font-size: 16px;
+}
+
+
+/*ABOUT-ME PAGE END*/
+
+/*EDUCATION PAGE*/
+.education_courses{
+    list-style-type: square;
+}
+
+.education_courses li{
+    color: red;
+}
+
+
+.education_courses li span{
+    color: #c3c3c4;
+}
+
+.collage-name{
+    color: #1DE9B6;
+}
+
+
+
+.edu-icons{
+    color:#42A5F5;
+}
+
+.bvb-logo{
+    background-color: #ffffff;
+    padding:15px;
+}
+.edu-trophy{
+    color:#FFFF8D;
+}
+
+.coll-details h2 span{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding:0px;
+    font-size: 18px;
+}
+.coll-details h5{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding:0px;
+}
+
+.coll-details h2{
+    margin:0px;
+    padding:0px;
+}
+
+.coll-details h4{
+    line-height: 1em !important;
+    padding: 1px !important;
+    margin: 0px;
+    font-size: 14px;
+}
+
+.education_courses li span{
+    font-size: 12px;
+}
+
+/*EDUCATION PAGE END*/
+
+/*SKILLS PAGE*/
+.skills_header{
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 36px;
+    margin:0px;
+    padding:8px;
+    color: #FFCCBC;
+}
+
+.header-without-top-margin{
+    padding:0px;
+    margin:0px;
+    margin-bottom:10px;
+}
+
+/*.skills-table tr td{*/
+    /*border: none !important;*/
+/*}*/
+
+.certifications-table tr td{
+    border: none !important;
+}
+
+.skill-label{
+    color:#FF9E80;
+}
+
+.certification-link{
+    color: #FF5252;
+}
+
+.certification-brand{
+    width:156px;
+    height:64px;
+    padding: 10px;
+}
+
+.certifications-table td{
+    font-size: 16px;
+}
+
+.certifications-table td p{
+    font-size: 18px;
+    color: #1DE9B6;
+    margin-bottom: 0px;
+}
+
+.resumeSection{
+    text-align: center;
+}
+
+.cvSection{
+    text-align: center;
+}
+
+.downloadIcon{
+    color: #FF5252;
+    font-size: 18px;
+}
+.resumeBtn{
+    padding: 12px;
+    font-size: 16px;
+    background-color: #2196F3;
+    border-color: transparent;
+}
+
+.cvBtn{
+    padding: 12px;
+    font-size: 16px;
+    background-color: #2196F3;
+    border-color: transparent;
+}
+/*SKILLSPAGE END*/
+
+/*PROJECT PAGE*/
+
+.project {
+    width: 350px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    background-color: aqua;
+    margin-top:10px;
+}
+
+.project .project-back {
+    background-color:#F5F5F5;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 0;
+    transition: opacity .5s;
+}
+
+.project:hover .project-back {
+    opacity: 1;
+    transition: opacity .5s;
+}
+.project-back h3{
+    display: block;
+    text-align: center;
+    line-height: 50px!important;
+    position: relative;
+}
+.project-back p{
+    text-align: center;
+}
+
+.project-front h3, .project-front h5{
+    margin:0;
+    padding:5px;
+}
+
+/*PROJECT COLORS*/
+
+.wham-project{
+    background-color: #64FFDA;
+}
+
+.hushvault-project{
+    background-color: #FFCCBC;
+}
+
+.t2t-project{
+    background-color: #FFCC80;
+}
+
+.converter-project{
+    background-color: #E1BEE7;
+}
+
+.hangman-project{
+    background-color:#81D4FA;
+}
+
+.fna-project{
+    background-color:#B2EBF2;
+}
+
+.view-color-pal-project{
+    background-color:#A5D6A7;
+
+}
+
+.doc-generator-project{
+    background-color:#FFF59D;
+
+}
+
+.website-project{
+    background-color:#D7CCC8;
+}
+
+.osgi-project{
+    background-color:#FFECB3;
+}
+
+.ir-project{
+    background-color: #CFD8DC;
+}
+
+/*SMALL SCREEN*/
+/*project page*/
+.projects{
+    text-align: center;
+}
+
+.project-front h3, .project-front h5, .project-back h3, .project-back p{
+    color: #000000;
+}
+
+.project {
+    width: 220px !important;
+    height: 75px !important;
+    text-align: left !important;
+}
+
+.project h3{
+    font-size: 14px !important;
+}
+
+/*project page end*/
+
+/*EXPERIENCE PAGE*/
+.exp-header{
+    font-size: 16px;
+    color:#1DE9B6;
+}
+
+.exp{
+    margin-bottom: 10px;
+}
+
+.exp-role,.exp-role,.exp-duration,.exp-desc{
+    font-size: 13px;
+}
+
+.exp-desc-list li span{
+    font-size: 13px;
+}
+
+.exp h1, .exp h2, .exp h3, .exp h4, .exp h5, .exp h6{
+    padding: 1px;
+    margin: 0px;
+}
+.exp-desc-list{
+    list-style-type: square;
+}
+
+.exp-desc-list li{
+    color: red;
+}
+
+.exp-desc-list li span{
+    color: #c3c3c4;
+}
+
+/*EXPERIENCE PAGE END*/
+
+/*CONTACT PAGE SECTION*/
+.vijet-image{
+    width: 165px;
+    height: 165px;
+}
+
+.contact_address_row{
+    display:block;
+    margin:auto;
+}
+.contact_me_dialogue{
+    /*font-family: 'Risque', cursive;*/
+    /*font-family: 'Bilbo Swash Caps', cursive;*/
+    font-family: 'Tillana', cursive;
+
+    font-size: 18px;
+    padding: 12px;
+}
+.smiley{
+    color:yellow;
+}
+.glypicons-contact{
+    font-size: 16px;
+    color: #2196F3;
+}
+.contact-me-address-table{
+    max-width: 200px;
+    display:table;
+    margin:auto;
+}
+
+.connect-me-label{
+    text-align: center;
+}
+
+.social-network{
+    text-align: center;
+}
+.social-media-icon{
+    width: 32px;
+    height:32px;
+}
+
+
+.details-submission-form{
+    margin-top: 25px;
+}
+.visitor-msg, .visitor-email,.visitor-send-btn{
+    margin-top: 10px;
+}
+
+.visitor-name, .visitor-msg, .visitor-email,.visitor-send-btn{
+    margin-bottom: 10px;
+    border-radius: 0px;
+    background-color: white;
+}
+
+.visitor-send-btn{
+    background-color: #2196F3;
+}
+
+.social-media-icon:hover {
+    transform: scale(1.2)
+}
+
+.contactMeSection{
+    position: relative;
+}
+.copyright-footer-section{
+    position: absolute;
+    bottom: 0px;
+    padding: 15px;
+    width: 100%;
+    text-align: right;
+    color: #000000;
+}
+.copyright-footer-section-small{
+    bottom: 0px;
+    padding: 15px;
+    width: 100%;
+    text-align: right;
+    font-size: 12px;
+    color: #000000;
+}
+
+.copyright-footer{
+    background-color: #F5F5F5;
+}
+
+.glyphicon-copyright-mark{
+    color:#000000;
+}
+.copyright-heart-icon{
+    color: red;
+    animation-name:rotate-360-repeated;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes rotate-360-repeated {
+    50%{transform:scale(1.1,1.1);}
+    100%{transform:scale(1.2,1.2);}
+}
+/*CONTACT ME PAGE ENDS*/
+
+/*COMMON SECTION ENDS*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .section-heading{
+        font-size: 32px !important;
+    }
+    /*ABOUT-ME PAGE*/
+
+    .abt-me-vijet-image{
+        margin-right: 15px;
+    }
+    .my-image-section{
+        float: left;
+    }
+
+    .my-family-section{
+        float: right;
+    }
+
+    .my-granny-section{
+        float: left;
+    }
+
+    .about_me_content{
+        text-align: justify;
+    }
+
+    .about-me-page-text-content{
+        margin:0px;
+        font-size: 16px;
+    }
+
+    /*ABOUT-ME PAGE END*/
+    /*EDUCATION PAGE*/
+
+    .coll-details h5{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+    }
+    .coll-details h2 span{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+        font-size: 30px !important;
+    }
+
+    .coll-details h2{
+        margin:0px;
+        padding:0px;
+    }
+
+    .coll-details h4{
+        line-height: 1.5em !important;
+        padding: 1px !important;
+        margin: 0px !important;
+        font-size: 18px !important;
+    }
+
+    .education-coll-logo{
+        width :175px !important;
+        height :175px !important;
+    }
+
+    .education_courses li span{
+        font-size: 16px !important;
+    }
+    .coll-details{
+        margin-bottom: 18px;
+    }
+    /*EDUCATION PAGE END*/
+    /*SKILLS PAGE*/
+    .skills_header{
+        font-size: 28px !important;
+    }
+    /*SKILLSPAGE END*/
+    /*project page*/
+
+    .project {
+        width: 275px !important;
+        height: 100px !important;
+    }
+
+    .project h3{
+        font-size: 20px !important;
+    }
+
+    /*project page end*/
+    /*project page*/
+    .projects{
+        text-align: left;
+    }
+
+    .project {
+        width: 225px !important;
+        height: 100px !important;
+    }
+
+    .project h3{
+        font-size: 18px !important;
+    }
+
+
+    /*project page end*/
+    /*EXPERIENCE PAGE*/
+    .exp-header{
+        font-size: 22px !important;
+    }
+
+    .exp-role {
+        font-size: 16px !important;
+    }
+    .exp-neu-logo{
+        width:96px !important;
+        height:96px!important;
+        padding: 5px!important;
+    }
+
+    .exp-bosch-logo{
+        margin-top: 15px !important;
+        width:150px !important;
+    }
+
+    /*EXPERIENCE PAGE END*/
+    /*CONTACT ME PAGE*/
+    .vijet-image{
+        width: 165px !important;
+        height: 165px !important;
+    }
+
+    .copyright-info{
+        font-size: 14px !important;
+    }
+
+    .contact_me_dialogue{
+        font-size: 24px !important;
+    }
+
+    .contact-me-address-table{
+        font-size: 14px !important;
+        max-width: 300px !important;
+        display: inline-table !important;
+        margin-top: 25px !important;
+    }
+
+    .details-submission-form{
+        margin-top: 25px !important;
+        font-size: 14px !important;
+    }
+
+    .connect-me-label{
+        text-align: center !important;
+        max-width: 300px !important;
+        font-size: 20px !important;
+    }
+    .social-network{
+        width: 300px !important;
+        text-align: left !important;
+    }
+    /*CONTACT PAGE ENDS*/
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .section-heading{
+        font-size: 36px !important;
+    }
+
+    /*ABOUT-ME PAGE*/
+
+    .abt-me-vijet-image{
+        margin-right: 15px;
+    }
+    .my-image-section{
+        float: left;
+    }
+
+    .my-family-section{
+        float: right;
+    }
+
+    .my-granny-section{
+        float: left;
+    }
+
+    .about_me_content{
+        text-align: justify;
+    }
+
+    .about-me-page-text-content{
+        margin:0px;
+        font-size: 16px;
+    }
+
+    /*ABOUT-ME PAGE END*/
+    /*EDUCATION PAGE*/
+    .coll-details h2 span{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+        font-size: 30px !important;
+    }
+    .coll-details h5{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+    }
+
+    .coll-details h2{
+        margin:0px;
+        padding:0px;
+    }
+
+    .coll-details h4{
+        line-height: 1.5em !important;
+        padding: 1px !important;
+        margin: 0px !important;
+        font-size: 18px !important;
+    }
+
+    .education-coll-logo{
+        width :175px !important;
+        height :175px !important;
+    }
+
+    .education_courses li span{
+        font-size: 16px !important;
+    }
+    .coll-details{
+        margin-bottom: 18px;
+    }
+    /*EDUCATION PAGE END*/
+    /*SKILLS PAGE*/
+    .skills_header{
+        font-size: 36px !important;
+    }
+
+    .resumeSection,.cvSection{
+        margin-top: 16px !important;
+    }
+    /*SKILLSPAGE END*/
+
+    /*project page*/
+
+    .projects{
+        text-align: left;
+    }
+
+    .project {
+        width: 275px !important;
+        height: 100px !important;
+    }
+
+    .project h3{
+        font-size: 20px !important;
+    }
+
+
+    /*project page end*/
+    /*EXPERIENCE PAGE*/
+
+    .exp-header{
+        font-size: 26px !important;
+    }
+
+    .exp-desc-list li span{
+        font-size: 16px !important;
+    }
+
+    .exp-neu-logo{
+        width:96px;
+        height:96px;
+        padding: 5px;
+    }
+
+    .exp-bosch-logo{
+        margin-top: 15px;
+        width:150px;
+    }
+
+    /*EXPERIENCE PAGE END*/
+    /*CONTACT ME PAGE*/
+
+
+    .vijet-image{
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .copyright-info{
+        font-size: 14px !important;
+    }
+
+    .contact_me_dialogue{
+        font-size: 24px !important;
+    }
+
+    .contact-me-address-table{
+        font-size: 14px !important;
+        max-width: 300px !important;
+        display: inline-table !important;
+        margin-top: 25px !important;
+    }
+
+    .details-submission-form{
+        margin-top: 25px !important;
+        font-size: 14px !important;
+    }
+    .social-media-icon{
+        width: 40px !important;
+        height:40px !important;
+    }
+    .connect-me-label{
+        text-align: center !important;
+        max-width: 300px !important;
+        font-size: 20px !important;
+    }
+    .social-network{
+        width: 300px !important;
+        text-align: left !important;
+    }
+    /*CONTACT ME PAGE*/
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .section-heading{
+        font-size: 48px !important;
+    }
+
+    /*ABOUT-ME PAGE*/
+
+    .abt-me-vijet-image{
+        margin-right: 15px;
+    }
+    .my-image-section{
+        float: left;
+    }
+
+    .my-family-section{
+        float: right;
+    }
+
+    .my-granny-section{
+        float: left;
+    }
+
+    .about_me_content{
+        text-align: justify;
+    }
+
+    .about-me-page-text-content{
+        margin:0px;
+        font-size: 16px;
+    }
+    /*ABOUT-ME PAGE END*/
+    /*EDUCATION PAGE*/
+
+    .coll-details h2 span{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+        font-size: 30px !important;
+    }
+
+    .coll-details h5{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding:0px;
+    }
+
+    .coll-details h2{
+        margin:0px;
+        padding:0px;
+    }
+
+    .coll-details h4{
+        line-height: 1.5em !important;
+        padding: 1px !important;
+        margin: 0px !important;
+        font-size: 18px !important;
+    }
+
+    .education-coll-logo{
+        width :175px !important;
+        height :175px !important;
+    }
+
+    .education_courses li span{
+        font-size: 16px !important;
+    }
+    .coll-details{
+        margin-bottom: 18px;
+    }
+    /*EDUCATION PAGE END*/
+    /*SKILLS PAGE*/
+    .skills_header{
+        font-size: 36px !important;
+    }
+    /*SKILLSPAGE END*/
+    /*project page*/
+    .projects{
+        text-align: left;
+    }
+
+    .project {
+        width: 350px !important;
+        height: 100px !important;
+    }
+
+    .project h3{
+        font-size: 24px !important;
+    }
+    /*project page end*/
+    /*EXPERIENCE PAGE*/
+
+    .exp-header{
+        font-size: 26px !important;
+    }
+
+    .exp-role,.exp-role,.exp-duration,.exp-desc{
+        font-size: 16px !important;
+    }
+
+    .exp-desc-list li span{
+        font-size: 16px !important;
+    }
+
+
+    .exp-neu-logo{
+        width:96px;
+        height:96px;
+        padding: 5px;
+    }
+
+    .exp-bosch-logo{
+        margin-top: 15px;
+        width:150px;
+    }
+
+    /*EXPERIENCE PAGE END*/
+    /*CONTACT ME PAGE*/
+    .vijet-image{
+        width: 200px !important;
+        height: 200px !important;
+        margin-left: 25px;
+    }
+
+    .copyright-info{
+        font-size: 14px !important;
+    }
+
+    .contact_me_dialogue{
+        font-size: 32px !important;
+    }
+
+    .contact-me-address-table{
+        font-size: 18px !important;
+        max-width: 350px !important;
+        display: inline-table !important;
+        margin-top: 25px !important;
+    }
+
+    .connect-me-label{
+        text-align: center !important;
+        max-width: 350px !important;
+        font-size: 20px !important;
+    }
+
+    .details-submission-form{
+        margin-top: 25px !important;
+    }
+
+    .social-media-icon{
+        width: 48px !important;
+        height:48px !important;
+    }
+
+    .social-network{
+        width: 400px !important;
+        text-align: left !important;
+    }
+}
